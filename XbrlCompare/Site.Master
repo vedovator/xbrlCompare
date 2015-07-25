@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Confronti.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Applicazione</title>
+
+    <asp:PlaceHolder runat="server">
+       
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="Content/Site.css">
+    <link rel="stylesheet" type="text/css" href="Content/xbrl_theme.css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        
+        <!-- external libs from cdnjs -->
+        <script type="text/javascript" src="pivot/jquery.min.js"></script>
+        <script type="text/javascript" src="pivot/jquery-ui.min.js"></script>
+
+        <!-- PivotTable.js libs from ../dist -->
+        <link rel="stylesheet" type="text/css" href="pivot/dist/pivot.css">
+        <script type="text/javascript" src="pivot/dist/pivot.js"></script>
+        <script type="text/javascript" src="pivot/dist/gchart_renderers.js"></script>
+
+</head>
+<body>
+    <form runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Confronti</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Contact">Contatti</a></li>
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>   </li>
+                                <li>   </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Vedo</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
