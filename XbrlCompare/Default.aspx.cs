@@ -13,6 +13,8 @@ namespace Confronti
 {
     public partial class _Default : Page
     {
+        protected string MyString;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -30,30 +32,48 @@ namespace Confronti
           
               HttpPostedFile userPostedFile1 = uploadedFiles[0];
               HttpPostedFile userPostedFile2 = uploadedFiles[1];
+              int FileLen;
+              System.IO.Stream MyStream;
 
               try {
                   // process file #1
-                  if (userPostedFile1.ContentLength > 0) {
-                     Span1.InnerHtml += "<u>File #1</u><br>";
+                  // check if it has xml extension
+                  if ((userPostedFile1.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xml"))
+                  {
+                      FileLen = userPostedFile1.ContentLength;
+                      byte[] input = new byte[FileLen];
+                      // Initialize the stream.
+                      MyStream = userPostedFile1.InputStream;
+                      // Read the file into the byte array.
+                      MyStream.Read(input, 0, FileLen);
+                      // Copy the byte array into a string.
+                      for (int Loop1 = 0; Loop1 < FileLen; Loop1++)
+                          MyString = MyString + input[Loop1].ToString();
+                      Session["xmlfile1"] = MyString;
+                      Span1.InnerHtml += "<u>File #1</u><br>";
                      Span1.InnerHtml += "File Content Type: " +  userPostedFile1.ContentType      + "<br>";
-                     Span1.InnerHtml += "File Size: " + userPostedFile1.ContentLength           + "kb<br>";
+                     Span1.InnerHtml += "File Size: " + FileLen + "kb<br>";
                      Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
 
-                     Session["xmlfile1"] = filepath + "\\" + Guid.NewGuid() + Path.GetFileName(userPostedFile1.FileName);
-                     userPostedFile1.SaveAs(Session["xmlfile1"].ToString());
-                     Span1.InnerHtml += "Location where saved: " + Session["xmlfile1"] + "<p>";
                   }
                   // process file #2
-                  if (userPostedFile2.ContentLength > 0)
+                  if ((userPostedFile2.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xml"))
                   {
+                      FileLen = userPostedFile2.ContentLength;
+                      byte[] input = new byte[FileLen];
+                      // Initialize the stream.
+                      MyStream = userPostedFile2.InputStream;
+                      // Read the file into the byte array.
+                      MyStream.Read(input, 0, FileLen);
+                      MyString = "";
+                      // Copy the byte array into a string.
+                      for (int Loop1 = 0; Loop1 < FileLen; Loop1++)
+                          MyString = MyString + input[Loop1].ToString();
+                      Session["xmlfile2"] = MyString; 
                       Span1.InnerHtml += "<u>File #1</u><br>";
                       Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
                       Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
                       Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
-
-                      Session["xmlfile2"] = filepath + "\\" + Guid.NewGuid() + Path.GetFileName(userPostedFile2.FileName);
-                      userPostedFile1.SaveAs(Session["xmlfile2"].ToString());
-                      Span1.InnerHtml += "Location where saved: " + Session["xmlfile1"] + "<p>";
                   }
 
               } catch(Exception Ex) {
