@@ -18,13 +18,13 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         
         <!-- external libs from cdnjs -->
-        <script type="text/javascript" src="pivot/jquery.min.js"></script>
-        <script type="text/javascript" src="pivot/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
 
-        <!-- PivotTable.js libs from ../dist -->
-        <link rel="stylesheet" type="text/css" href="pivot/dist/pivot.css">
-        <script type="text/javascript" src="pivot/dist/pivot.js"></script>
-        <script type="text/javascript" src="pivot/dist/gchart_renderers.js"></script>
+        <!-- PivotTable.js libs from nicolaskruchten -->
+        <link rel="stylesheet" type="text/css" href="Content/pivot.css">
+        <script type="text/javascript" src="scripts/pivot.js"></script>
+        <script type="text/javascript" src="scripts/gchart_renderers.js"></script>
 
 </head>
 <body>

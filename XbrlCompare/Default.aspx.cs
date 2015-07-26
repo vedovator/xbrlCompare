@@ -39,7 +39,6 @@ namespace Confronti
                   {
                       MyString = new StreamReader(userPostedFile1.InputStream).ReadToEnd();
                       Session["xmlfile1"] = MyString;
-                      Span1.InnerHtml += MyString;
                       Span1.InnerHtml += "<u>File #1</u><br>";
                       Span1.InnerHtml += "File Content Type: " +  userPostedFile1.ContentType      + "<br>";
                       Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
@@ -51,7 +50,6 @@ namespace Confronti
                   {
                       MyString = new StreamReader(userPostedFile2.InputStream).ReadToEnd();
                       Session["xmlfile2"] = MyString;
-                      Span1.InnerHtml += MyString;
                       Span1.InnerHtml += "<u>File #2</u><br>";
                       Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
                       Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";

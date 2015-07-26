@@ -83,11 +83,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\pivot.css" />
+    <Content Include="Content\pivot.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\xbrl_theme.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="scripts\gchart_renderers.js" />
+    <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\pivot.js" />
     <Content Include="Site.Master" />
+    <Content Include="Test\mps1.json" />
+    <Content Include="Test\mps2.json" />
     <None Include="Test\shiporder.xsd">
       <SubType>Designer</SubType>
     </None>
