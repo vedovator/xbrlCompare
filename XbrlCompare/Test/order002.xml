@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<shiporder orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd">
+  <orderperson>Joe Black</orderperson>
+  <shipto>
+    <name>Ringo Plum</name>
+    <address>Abbey Road, 55</address>
+    <city>10230 London</city>
+    <country>UK</country>
+  </shipto>
+  <item>
+    <title>Magnify the cat</title>
+    <note>Private Edition</note>
+    <quantity>2</quantity>
+    <price>22.90</price>
+  </item>
+  <item>
+    <title>Show your fingers</title>
+    <quantity>1</quantity>
+    <price>4.90</price>
+  </item>
+</shiporder>

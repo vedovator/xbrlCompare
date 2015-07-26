@@ -28,49 +28,31 @@ namespace Confronti
           string filepath = Server.MapPath("\\Upload");
           HttpFileCollection uploadedFiles = Request.Files;
           Span1.InnerHtml = string.Empty;
-
           
               HttpPostedFile userPostedFile1 = uploadedFiles[0];
               HttpPostedFile userPostedFile2 = uploadedFiles[1];
-              int FileLen;
-              System.IO.Stream MyStream;
 
               try {
                   // process file #1
                   // check if it has xml extension
                   if ((userPostedFile1.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xml"))
                   {
-                      FileLen = userPostedFile1.ContentLength;
-                      byte[] input = new byte[FileLen];
-                      // Initialize the stream.
-                      MyStream = userPostedFile1.InputStream;
-                      // Read the file into the byte array.
-                      MyStream.Read(input, 0, FileLen);
-                      // Copy the byte array into a string.
-                      for (int Loop1 = 0; Loop1 < FileLen; Loop1++)
-                          MyString = MyString + input[Loop1].ToString();
+                      MyString = new StreamReader(userPostedFile1.InputStream).ReadToEnd();
                       Session["xmlfile1"] = MyString;
+                      Span1.InnerHtml += MyString;
                       Span1.InnerHtml += "<u>File #1</u><br>";
-                     Span1.InnerHtml += "File Content Type: " +  userPostedFile1.ContentType      + "<br>";
-                     Span1.InnerHtml += "File Size: " + FileLen + "kb<br>";
-                     Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
+                      Span1.InnerHtml += "File Content Type: " +  userPostedFile1.ContentType      + "<br>";
+                      Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
+                      Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
 
                   }
                   // process file #2
                   if ((userPostedFile2.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xml"))
                   {
-                      FileLen = userPostedFile2.ContentLength;
-                      byte[] input = new byte[FileLen];
-                      // Initialize the stream.
-                      MyStream = userPostedFile2.InputStream;
-                      // Read the file into the byte array.
-                      MyStream.Read(input, 0, FileLen);
-                      MyString = "";
-                      // Copy the byte array into a string.
-                      for (int Loop1 = 0; Loop1 < FileLen; Loop1++)
-                          MyString = MyString + input[Loop1].ToString();
-                      Session["xmlfile2"] = MyString; 
-                      Span1.InnerHtml += "<u>File #1</u><br>";
+                      MyString = new StreamReader(userPostedFile2.InputStream).ReadToEnd();
+                      Session["xmlfile2"] = MyString;
+                      Span1.InnerHtml += MyString;
+                      Span1.InnerHtml += "<u>File #2</u><br>";
                       Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
                       Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
                       Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
@@ -82,7 +64,7 @@ namespace Confronti
           
         }
 
-         void booksSettingsValidationEventHandler(object sender, ValidationEventArgs e)
+         void xbrlValidationEventHandler(object sender, ValidationEventArgs e)
         {
             if (e.Severity == XmlSeverityType.Warning)
             {
@@ -96,34 +78,29 @@ namespace Confronti
 
         protected void ValidateButton_Click(object sender, EventArgs e)
         {
-            XmlReaderSettings xbrlSettings = new XmlReaderSettings();
             string xsdfilepath = Server.MapPath("\\Test\\shiporder.xsd");
             // string xmlfilepath = Server.MapPath("\\Test\\order001.xml");
-            xbrlSettings.Schemas.Add("http://vedovator.it/shiporder.xsd", xsdfilepath);
-            xbrlSettings.ValidationType = ValidationType.Schema;
-            xbrlSettings.ValidationEventHandler += new ValidationEventHandler(booksSettingsValidationEventHandler);
+            // Create the XmlSchemaSet class.
+            XmlSchemaSet sc = new XmlSchemaSet();
+            // Add the schema to the collection
+            sc.Add("http://vedovator.it/shiporder.xsd", xsdfilepath);
+            
+            ValidationEventHandler veh = new ValidationEventHandler(xbrlValidationEventHandler);
             XmlDocument doc = new XmlDocument();
-
-            XmlReader reader1 = XmlReader.Create(Session["xmlfile1"].ToString(), xbrlSettings);
-
-            if (reader1.Read()) {          
-                doc.Load(reader1);
-                string json = JsonConvert.SerializeXmlNode(doc);
-                Span2.InnerHtml = "I file trasmessi sono validi.<br />";
-                Span2.InnerHtml += json;
-            }
-
-            XmlReader reader2 = XmlReader.Create(Session["xmlfile2"].ToString(), xbrlSettings);
-
-            if (reader2.Read())
-            {
-                doc.Load(reader2);
-                string json = JsonConvert.SerializeXmlNode(doc);
-                Span2.InnerHtml += "<br /><br />";
-                Span2.InnerHtml += json;
-            }
-
-
+            doc.Schemas = sc;
+            doc.LoadXml(Session["xmlfile1"].ToString());
+            doc.Validate(veh);
+            string json = JsonConvert.SerializeXmlNode(doc);
+            Span2.InnerHtml = "I file trasmessi sono validi.<br />";
+            Span2.InnerHtml += json;
+            
+            XmlDocument doc2 = new XmlDocument();
+            doc2.Schemas = sc;
+            doc2.LoadXml(Session["xmlfile2"].ToString());
+            doc2.Validate(veh);
+            json = JsonConvert.SerializeXmlNode(doc2);
+            Span2.InnerHtml += "<br /><br />";
+            Span2.InnerHtml += json;
         }
 
         protected void CompareButton_Click(object sender, EventArgs e)
