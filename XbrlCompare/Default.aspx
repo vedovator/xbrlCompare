@@ -39,7 +39,7 @@
         <div class="col-md-4">
             <h2>Confronto</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                You can easily compare two financial statements from different companies (relating the same period) navigating through financial elements.
             </p>
             <p>
                 <asp:LinkButton ID="CompareButton" runat="server" CssClass="btn btn-default" OnClick="CompareButton_Click" >Confronta</asp:LinkButton>                
@@ -55,19 +55,23 @@
                 var renderers = $.extend($.pivotUtilities.renderers, 
                     $.pivotUtilities.gchart_renderers);
 
-                $.getJSON("mps1.json", function(mps) {
+                $.getJSON("Test/mps1.json", function(mps) {
                     $("#output1").pivotUI(mps, {
                         renderers: renderers,                       
-                        cols: ["Age"], rows: ["Gender"],
+                        cols: ["Gender"], rows: ["Party"],
                         rendererName: "Area Chart1"
                     });
                 });
-                $.getJSON("mps2.json", function (mps) {
+                $.getJSON("Test/mps2.json", function (mps) {
                     $("#output2").pivotUI(mps, {
                         renderers: renderers,
-                        cols: ["Age"], rows: ["Gender"],
+                        cols: ["Gender"], rows: ["Party"],
                         rendererName: "Area Chart2"
                     });
+                });
+                $(".pvtRenderer").change(function () {
+                    // $(".pvtRenderer").val(this.value);
+                    alert("Handler for .change() called.");
                 });
              });
         </script>

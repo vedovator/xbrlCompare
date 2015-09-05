@@ -96,7 +96,16 @@
     <Content Include="Site.Master" />
     <Content Include="Test\mps1.json" />
     <Content Include="Test\mps2.json" />
+    <None Include="Test\itcc-ci-2014-11-17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Test\itvedo-ci-ese-2015-05-22.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Test\shiporder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Test\xbrl-instance-2003-12-31.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">

@@ -66,18 +66,17 @@ namespace Confronti
         {
             if (e.Severity == XmlSeverityType.Warning)
             {
-                Span1.InnerHtml ="WARNING: " + e.Message;
+                Span2.InnerHtml ="WARNING: " + e.Message;
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
-                Span1.InnerHtml = "ERROR: " + e.Message;
+                Span2.InnerHtml = "ERROR: " + e.Message;
             }
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
         {
             string xsdfilepath = Server.MapPath("\\Test\\shiporder.xsd");
-            // string xmlfilepath = Server.MapPath("\\Test\\order001.xml");
             // Create the XmlSchemaSet class.
             XmlSchemaSet sc = new XmlSchemaSet();
             // Add the schema to the collection
@@ -88,15 +87,18 @@ namespace Confronti
             doc.Schemas = sc;
             doc.LoadXml(Session["xmlfile1"].ToString());
             doc.Validate(veh);
-            string json = JsonConvert.SerializeXmlNode(doc);
-            Span2.InnerHtml = "I file trasmessi sono validi.<br />";
-            Span2.InnerHtml += json;
-            
             XmlDocument doc2 = new XmlDocument();
             doc2.Schemas = sc;
             doc2.LoadXml(Session["xmlfile2"].ToString());
             doc2.Validate(veh);
+            Span2.InnerHtml = "I file trasmessi sono validi.<br />";
+            
+            // now convert in Json and show on span2
+            string json = JsonConvert.SerializeXmlNode(doc);
+            Session["json1"] = json;
+            Span2.InnerHtml += json;
             json = JsonConvert.SerializeXmlNode(doc2);
+            Session["json2"] = json;
             Span2.InnerHtml += "<br /><br />";
             Span2.InnerHtml += json;
         }
