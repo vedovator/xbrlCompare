@@ -89,13 +89,14 @@
     <Content Include="Content\xbrl_theme.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="scripts\gchart_renderers.js" />
-    <Content Include="scripts\jquery-ui.min.js" />
-    <Content Include="scripts\jquery.min.js" />
-    <Content Include="scripts\pivot.js" />
+    <None Include="scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="scripts\jquery-2.1.4.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
+    <Content Include="scripts\jquery.canvasjs.min.js" />
     <Content Include="Site.Master" />
     <Content Include="Test\mps1.json" />
     <Content Include="Test\mps2.json" />
+    <Content Include="scripts\jquery-2.1.4.min.map" />
     <None Include="Test\itcc-ci-2014-11-17.xsd">
       <SubType>Designer</SubType>
     </None>
