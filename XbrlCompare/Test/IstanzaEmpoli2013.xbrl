@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:itcc-ci="http://www.infocamere.it/itnn/fr/itcc/ci/2013-01-04" xmlns:itcc-ci-ese="http://www.infocamere.it/itnn/fr/itcc/ci/ese/2013-01-04" xmlns:iso4217="http://www.xbrl.org/2003/iso4217">
+	<link:schemaRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="itcc-ci-ese-2013-01-04.xsd"/>
+	<context id="i_31-12-2012">
+		<entity>
+			<identifier scheme="http://www.infocamere.it">Careggi</identifier>
+		</entity>
+		<period>
+			<instant>2012-12-31</instant>
+		</period>
+		<scenario>
+			<itcc-ci-ese:scen>Depositato</itcc-ci-ese:scen>
+		</scenario>        
+	</context>
+	<context id="d_31-12-2012">
+		<entity>
+			<identifier scheme="http://www.infocamere.it">Careggi</identifier>
+		</entity>
+		<period>
+			<startDate>2012-01-01</startDate>
+			<endDate>2012-12-31</endDate>
+		</period>
+		<scenario>
+			<itcc-ci-ese:scen>Depositato</itcc-ci-ese:scen>
+		</scenario>        
+	</context>
+	<context id="i_31-12-2013">
+		<entity>
+			<identifier scheme="http://www.infocamere.it">Careggi</identifier>
+		</entity>
+		<period>
+			<instant>2013-12-31</instant>
+		</period>
+		<scenario>
+			<itcc-ci-ese:scen>Depositato</itcc-ci-ese:scen>
+		</scenario>        
+	</context>
+	<context id="d_31-12-2013">
+		<entity>
+			<identifier scheme="http://www.infocamere.it">Careggi</identifier>
+		</entity>
+		<period>
+			<startDate>2013-01-01</startDate>
+			<endDate>2013-12-31</endDate>
+		</period>
+		<scenario>
+			<itcc-ci-ese:scen>Depositato</itcc-ci-ese:scen>
+		</scenario>        
+	</context>
+	<unit id="eur">
+		<measure>iso4217:EUR</measure>
+	</unit>
+	
+	<itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1262405</itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili>	
+	<itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1365624</itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti>	
+	<itcc-ci:ImmobilizzazioniImmaterialiAltre contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2972630</itcc-ci:ImmobilizzazioniImmaterialiAltre>
+	<itcc-ci:TotaleImmobilizzazioniImmateriali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5600659</itcc-ci:TotaleImmobilizzazioniImmateriali>
+	<itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >255860</itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili>	
+	<itcc-ci:ImmobilizzazioniMaterialiTerreniIndisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2282308</itcc-ci:ImmobilizzazioniMaterialiTerreniIndisponibili>	
+	<itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >469588</itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili>	
+	<itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >177448458</itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili>
+	<itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati contextRef="i_31-12-2013" unitRef="eur" decimals="0">180456214</itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati>
+	<itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5414433</itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario>
+	<itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1430713</itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche>
+	<itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2708286</itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi>
+	<itcc-ci:ImmobilizzazioniMaterialiAttrezzatureAutomezzi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >121425</itcc-ci:ImmobilizzazioniMaterialiAttrezzatureAutomezzi>
+	<itcc-ci:ImmobilizzazioniMaterialiAltriBeni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >21741</itcc-ci:ImmobilizzazioniMaterialiAltriBeni>
+	<itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti contextRef="i_31-12-2013" unitRef="eur" decimals="0">371763</itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti>
+	<itcc-ci:TotaleImmobilizzazioniMateriali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >190524575</itcc-ci:TotaleImmobilizzazioniMateriali>
+	<itcc-ci:ImmobilizzazioniFinanziariePartecipazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0">149447</itcc-ci:ImmobilizzazioniFinanziariePartecipazioni>
+	<itcc-ci:TotaleImmobilizzazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >196274681</itcc-ci:TotaleImmobilizzazioni>
+	<!-- fine immobilizzazioni inizia attivo circolante -->
+	<itcc-ci:RimanenzeBeniSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3773114</itcc-ci:RimanenzeBeniSanitari>
+	<itcc-ci:RimanenzeBeniNonSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >105318</itcc-ci:RimanenzeBeniNonSanitari>	
+	<itcc-ci:TotaleRimanenze contextRef="i_31-12-2013" unitRef="eur" decimals="0">3878432</itcc-ci:TotaleRimanenze>
+	<!-- Crediti -->	
+	<itcc-ci:CreditiVersoStatoEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >351302</itcc-ci:CreditiVersoStatoEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoStatoTotaleCreditiVersoStato contextRef="i_31-12-2013" unitRef="eur" decimals="0" >351302</itcc-ci:CreditiVersoStatoTotaleCreditiVersoStato>	
+	<itcc-ci:CreditiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >114859657</itcc-ci:CreditiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoRegioneProvinciaAutonomaEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >9882360</itcc-ci:CreditiVersoRegioneProvinciaAutonomaEsigibiliOltreEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoRegioneProvinciaAutonomaTotaleCreditiVersoRegioneProvinciaAutonoma contextRef="i_31-12-2013" unitRef="eur" decimals="0" >124778017</itcc-ci:CreditiVersoRegioneProvinciaAutonomaTotaleCreditiVersoRegioneProvinciaAutonoma>
+	<itcc-ci:CreditiVersoComuniEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5259389</itcc-ci:CreditiVersoComuniEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoComuniTotaleCreditiVersoComuni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5259389</itcc-ci:CreditiVersoComuniTotaleCreditiVersoComuni>
+	<itcc-ci:CreditiVersoAziendeSanitariePubblicheEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >825088</itcc-ci:CreditiVersoAziendeSanitariePubblicheEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoAziendeSanitariePubblicheTotaleCreditiVersoAziendeSanitariePubbliche contextRef="i_31-12-2013" unitRef="eur" decimals="0" >825088</itcc-ci:CreditiVersoAziendeSanitariePubblicheTotaleCreditiVersoAziendeSanitariePubbliche>
+	<itcc-ci:CreditiVersoPartecipateEntiRegionaliEsigibiliEntroEsercizioSuccessivo  contextRef="i_31-12-2013" unitRef="eur" decimals="0">135641</itcc-ci:CreditiVersoPartecipateEntiRegionaliEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoPartecipateEntiRegionaliTotaleCreditiPartecipateEntiRegionali  contextRef="i_31-12-2013" unitRef="eur" decimals="0">135641</itcc-ci:CreditiVersoPartecipateEntiRegionaliTotaleCreditiPartecipateEntiRegionali>
+	<itcc-ci:CreditiVersoErarioEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >16530</itcc-ci:CreditiVersoErarioEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoErarioTotaleVersoErario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >16530</itcc-ci:CreditiVersoErarioTotaleVersoErario>	
+	<itcc-ci:CreditiVersoAltriEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >11899124</itcc-ci:CreditiVersoAltriEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >341201</itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo>
+	<itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >12240325</itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri>
+    <itcc-ci:TotaleCrediti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >143606292</itcc-ci:TotaleCrediti>
+	<!-- disponibilita liquide  -->
+	<itcc-ci:DisponibilitaLiquideDanaroValoriCassa contextRef="i_31-12-2013" unitRef="eur" decimals="0" >232513</itcc-ci:DisponibilitaLiquideDanaroValoriCassa>
+	<itcc-ci:DisponibilitaLiquideIstitutoTesoriere contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4759563</itcc-ci:DisponibilitaLiquideIstitutoTesoriere>	
+	<itcc-ci:DisponibilitaLiquideContoCorrentePostale contextRef="i_31-12-2013" unitRef="eur" decimals="0" >22368</itcc-ci:DisponibilitaLiquideContoCorrentePostale>
+	<itcc-ci:TotaleDisponibilitaLiquide contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5014444</itcc-ci:TotaleDisponibilitaLiquide>
+	<itcc-ci:TotaleAttivoCircolante contextRef="i_31-12-2013" unitRef="eur" decimals="0" >152499168</itcc-ci:TotaleAttivoCircolante>	
+	<!-- inizio ratei risconti attivi -->
+	<itcc-ci:AttivoRateiRiscontiRateiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3940</itcc-ci:AttivoRateiRiscontiRateiAttivi>
+	<itcc-ci:AttivoRateiRiscontiRiscontiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >21671</itcc-ci:AttivoRateiRiscontiRiscontiAttivi>
+	<itcc-ci:AttivoRateiRiscontiRateiRiscontiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >25611</itcc-ci:AttivoRateiRiscontiRateiRiscontiAttivi>	
+	<itcc-ci:TotaleAttivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >348799460</itcc-ci:TotaleAttivo>
+	<!-- fine attivo iniziano conti ordine -->
+	<itcc-ci:CanoniLeasingDaPagare contextRef="i_31-12-2013" unitRef="eur" decimals="0" >79466</itcc-ci:CanoniLeasingDaPagare>
+	<itcc-ci:DepositiCauzionali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2729458</itcc-ci:DepositiCauzionali>
+	<itcc-ci:BeniInComodato contextRef="i_31-12-2013" unitRef="eur" decimals="0" >395745</itcc-ci:BeniInComodato>
+	<itcc-ci:AltriContiOrdine contextRef="i_31-12-2013" unitRef="eur" decimals="0">7725744</itcc-ci:AltriContiOrdine>
+	<itcc-ci:TotaleContiOrdine contextRef="i_31-12-2013" unitRef="eur" decimals="0">10930413</itcc-ci:TotaleContiOrdine>
+	<!-- inizia passivo e patrimonio netto -->
+	<itcc-ci:PatrimonioNettoFondoDotazione contextRef="i_31-12-2013" unitRef="eur" decimals="0">3598434</itcc-ci:PatrimonioNettoFondoDotazione>
+	<itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiBeniPrimaDotazione contextRef="i_31-12-2013" unitRef="eur" decimals="0" >33701572</itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiBeniPrimaDotazione>
+	<itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaRegione contextRef="i_31-12-2013" unitRef="eur" decimals="0" >74090093</itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaRegione>
+	<itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaAltriPubblici contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1644883</itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaAltriPubblici>
+	<itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaRettificaContributi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >407823</itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaRettificaContributi>  
+	<itcc-ci:PatrimonioNettoTotaleFinanziamentiPerInvestimenti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >151708270</itcc-ci:PatrimonioNettoTotaleFinanziamentiPerInvestimenti>
+	<itcc-ci:PatrimonioNettoRiserveDonazioniLascitiVincolati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >66710</itcc-ci:PatrimonioNettoRiserveDonazioniLascitiVincolati>
+	<itcc-ci:PatrimonioNettoAltreRiserve contextRef="i_31-12-2013" unitRef="eur" decimals="0" >958736</itcc-ci:PatrimonioNettoAltreRiserve>
+	<itcc-ci:PatrimonioNettoUtiliPerditePortatiNuovo contextRef="i_31-12-2013" unitRef="eur" decimals="0">-19446190</itcc-ci:PatrimonioNettoUtiliPerditePortatiNuovo>
+	<itcc-ci:PatrimonioNettoUtilePerditaEsercizioUtilePerditaEsercizio contextRef="i_31-12-2013" unitRef="eur" decimals="0" >22444</itcc-ci:PatrimonioNettoUtilePerditaEsercizioUtilePerditaEsercizio>
+	<itcc-ci:TotalePatrimonioNetto contextRef="i_31-12-2013" unitRef="eur" decimals="0" >136908404</itcc-ci:TotalePatrimonioNetto>
+	<!-- Fondi per rischi ed oneri -->
+	<itcc-ci:FondiRischiOneriRischi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4056106</itcc-ci:FondiRischiOneriRischi>
+	<itcc-ci:FondiRischiOneriQuotaInutilizzataContributiVincolati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >10775637</itcc-ci:FondiRischiOneriQuotaInutilizzataContributiVincolati>
+	<itcc-ci:FondiRischiOneriAltri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8562673</itcc-ci:FondiRischiOneriAltri>
+	<itcc-ci:TotaleFondiRischiOneri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >23394416</itcc-ci:TotaleFondiRischiOneri>
+	<!-- TFR -->
+	<itcc-ci:TrattamentoFineRapportoPremiOperosita contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1216476</itcc-ci:TrattamentoFineRapportoPremiOperosita>  
+	<itcc-ci:TotaleTrattamentoFineRapporto contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1216476</itcc-ci:TotaleTrattamentoFineRapporto>
+	<!-- Debiti -->	
+	<itcc-ci:DebitiMutuiPassiviEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >201273</itcc-ci:DebitiMutuiPassiviEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiMutuiPassiviEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >14063221</itcc-ci:DebitiMutuiPassiviEsigibiliOltreEsercizioSuccessivo>
+	<itcc-ci:DebitiMutuiPassiviTotaleMutuiPassivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >14264494</itcc-ci:DebitiMutuiPassiviTotaleMutuiPassivi>
+	<itcc-ci:DebitiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >67108085</itcc-ci:DebitiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiVersoRegioneProvinciaAutonomaEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1480000</itcc-ci:DebitiVersoRegioneProvinciaAutonomaEsigibiliOltreEsercizioSuccessivo>
+	<itcc-ci:DebitiVersoRegioneProvinciaAutonomaTotaleDebitiVersoRegioneProvinciaAutonoma contextRef="i_31-12-2013" unitRef="eur" decimals="0" >68588085</itcc-ci:DebitiVersoRegioneProvinciaAutonomaTotaleDebitiVersoRegioneProvinciaAutonoma>	
+	<itcc-ci:DebitiVersoAziendeSanitariePubblicheEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1150554</itcc-ci:DebitiVersoAziendeSanitariePubblicheEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiVersoAziendeSanitariePubblicheTotaleDebitiVersoAziendeSanitariePubbliche contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1150554</itcc-ci:DebitiVersoAziendeSanitariePubblicheTotaleDebitiVersoAziendeSanitariePubbliche>	
+	<itcc-ci:DebitiVersoPartecipateEntiRegionaliEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >74309</itcc-ci:DebitiVersoPartecipateEntiRegionaliEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiVersoPartecipateEntiRegionaliTotaleVersoPartecipateEntiRegionali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >74309</itcc-ci:DebitiVersoPartecipateEntiRegionaliTotaleVersoPartecipateEntiRegionali>
+	<itcc-ci:DebitiDebitiVersoFornitoriEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >42017144</itcc-ci:DebitiDebitiVersoFornitoriEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiDebitiVersoFornitoriTotaleDebitiVersoFornitori contextRef="i_31-12-2013" unitRef="eur" decimals="0" >42017144</itcc-ci:DebitiDebitiVersoFornitoriTotaleDebitiVersoFornitori>
+	<itcc-ci:DebitiVersoIstitutoTesoriereEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >19734500</itcc-ci:DebitiVersoIstitutoTesoriereEsigibiliEntroEsercizioSuccessivo>	
+	<itcc-ci:DebitiVersoIstitutoTesoriereTotaleVersoIstitutoTesoriere contextRef="i_31-12-2013" unitRef="eur" decimals="0" >19734500</itcc-ci:DebitiVersoIstitutoTesoriereTotaleVersoIstitutoTesoriere>
+	<itcc-ci:DebitiDebitiTributariEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0">5799044</itcc-ci:DebitiDebitiTributariEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiDebitiTributariTotaleDebitiTributari contextRef="i_31-12-2013" unitRef="eur" decimals="0">5799044</itcc-ci:DebitiDebitiTributariTotaleDebitiTributari>
+	<itcc-ci:DebitiDebitiVersoIstitutiPrevidenzaSicurezzaSocialeEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8571131</itcc-ci:DebitiDebitiVersoIstitutiPrevidenzaSicurezzaSocialeEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiDebitiVersoIstitutiPrevidenzaSicurezzaSocialeTotaleDebitiVersoIstitutiPrevidenzaSicurezzaSociale contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8571131</itcc-ci:DebitiDebitiVersoIstitutiPrevidenzaSicurezzaSocialeTotaleDebitiVersoIstitutiPrevidenzaSicurezzaSociale>
+	<itcc-ci:DebitiAltriDebitiEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >26068043</itcc-ci:DebitiAltriDebitiEsigibiliEntroEsercizioSuccessivo>
+	<itcc-ci:DebitiAltriDebitiTotaleAltriDebiti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >26068043</itcc-ci:DebitiAltriDebitiTotaleAltriDebiti>
+	<itcc-ci:TotaleDebiti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >170724053</itcc-ci:TotaleDebiti>
+	<!-- fine debiti inizio ratei risconti passivi -->
+	<itcc-ci:PassivoRateiRiscontiRateiPassivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >352249</itcc-ci:PassivoRateiRiscontiRateiPassivi>
+	<itcc-ci:PassivoRateiRiscontiRiscontiPassivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >660641</itcc-ci:PassivoRateiRiscontiRiscontiPassivi>
+	<itcc-ci:PassivoRateiRiscontiTotaleRateiRisconti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1012890</itcc-ci:PassivoRateiRiscontiTotaleRateiRisconti>
+	<itcc-ci:TotalePassivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >348799460</itcc-ci:TotalePassivo>
+	<!-- inizio conto economico -->
+	<!-- Valore della Produzione -->
+	<itcc-ci:ValoreProduzioneContributiContoEsercizioDaRegionePerQuotaFSRegionale contextRef="i_31-12-2013" unitRef="eur" decimals="0" >346474758</itcc-ci:ValoreProduzioneContributiContoEsercizioDaRegionePerQuotaFSRegionale>
+	<itcc-ci:ValoreProduzioneContributiContoEsercizioExtraFondoDaRegioneVincolati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3606021</itcc-ci:ValoreProduzioneContributiContoEsercizioExtraFondoDaRegioneVincolati>
+	<itcc-ci:ValoreProduzioneContributiContoEsercizioExtraFondoDaAltriSoggettiPubblici contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8969440</itcc-ci:ValoreProduzioneContributiContoEsercizioExtraFondoDaAltriSoggettiPubblici>
+	<itcc-ci:ValoreProduzioneContributiContoEsercizioTotaleExtraFondo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >12525461</itcc-ci:ValoreProduzioneContributiContoEsercizioTotaleExtraFondo>
+	<itcc-ci:ValoreProduzioneTotaleContributiContoEsercizio contextRef="i_31-12-2013" unitRef="eur" decimals="0" >359050220</itcc-ci:ValoreProduzioneTotaleContributiContoEsercizio>
+	<itcc-ci:ValoreProduzioneRettificaContributiContoEsercizioPerInvestimenti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >-900012</itcc-ci:ValoreProduzioneRettificaContributiContoEsercizioPerInvestimenti>
+	<itcc-ci:ValoreProduzioneUtilizzoFondiQuoteInutilizzateContributiVincolatiEserciziPrecedenti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2688353</itcc-ci:ValoreProduzioneUtilizzoFondiQuoteInutilizzateContributiVincolatiEserciziPrecedenti>
+	<itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieAdAziendePubbliche contextRef="i_31-12-2013" unitRef="eur" decimals="0" >15843998</itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieAdAziendePubbliche>
+	<itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieIntramoenia contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4599982</itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieIntramoenia>
+	<itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieAltro contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5942762</itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieAltro>
+	<itcc-ci:ValoreProduzioneTotaleRicaviPrestazioniSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >26386742</itcc-ci:ValoreProduzioneTotaleRicaviPrestazioniSanitarie>
+	<itcc-ci:ValoreProduzioneConcorsiRecuperiRimborsi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >9553143</itcc-ci:ValoreProduzioneConcorsiRecuperiRimborsi>
+	<itcc-ci:ValoreProduzioneCompartecipazioneAllaSpesaPerPrestazioniSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >9984785</itcc-ci:ValoreProduzioneCompartecipazioneAllaSpesaPerPrestazioniSanitarie>
+	<itcc-ci:ValoreProduzioneQuotaContributiContoCapitaleImputataEsercizio contextRef="i_31-12-2013" unitRef="eur" decimals="0" >7979846</itcc-ci:ValoreProduzioneQuotaContributiContoCapitaleImputataEsercizio>	
+	<itcc-ci:ValoreProduzioneAltriRicaviProventi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1222700</itcc-ci:ValoreProduzioneAltriRicaviProventi>
+	<itcc-ci:TotaleValoreProduzione contextRef="d_31-12-2013" unitRef="eur" decimals="0" >415965776</itcc-ci:TotaleValoreProduzione>
+	<!-- Costi della Produzione -->
+	<!-- Beni -->	
+	<itcc-ci:CostiProduzioneAcquistiBeniSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >47415899</itcc-ci:CostiProduzioneAcquistiBeniSanitari>
+	<itcc-ci:CostiProduzioneAcquistiBeniNonSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1289686</itcc-ci:CostiProduzioneAcquistiBeniNonSanitari>
+	<itcc-ci:CostiProduzioneTotaleAcquistiBeni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >48714585</itcc-ci:CostiProduzioneTotaleAcquistiBeni>
+	<!-- Servizi -->	
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariMedicinaDiBase contextRef="i_31-12-2013" unitRef="eur" decimals="0" >26017834</itcc-ci:CostiProduzioneAcquistiServiziSanitariMedicinaDiBase>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariFarmaceutica contextRef="i_31-12-2013" unitRef="eur" decimals="0" >30941988</itcc-ci:CostiProduzioneAcquistiServiziSanitariFarmaceutica>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariSpecialisticaAmbulatoriale contextRef="i_31-12-2013" unitRef="eur" decimals="0" >18046746</itcc-ci:CostiProduzioneAcquistiServiziSanitariSpecialisticaAmbulatoriale>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaRiabilitativa contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2548534</itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaRiabilitativa>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaIntegrativa contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4640952</itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaIntegrativa>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaProtesica contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1159086</itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaProtesica>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaOspedaliera contextRef="i_31-12-2013" unitRef="eur" decimals="0" >51833850</itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaOspedaliera>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariPsichiatricaResidenziale contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1740746</itcc-ci:CostiProduzioneAcquistiServiziSanitariPsichiatricaResidenziale>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariDistribuzioneFarmaciFileF contextRef="i_31-12-2013" unitRef="eur" decimals="0" >10765765</itcc-ci:CostiProduzioneAcquistiServiziSanitariDistribuzioneFarmaciFileF>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariTermaliInConvenzione contextRef="i_31-12-2013" unitRef="eur" decimals="0" >322681</itcc-ci:CostiProduzioneAcquistiServiziSanitariTermaliInConvenzione>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariTrasportoSanitario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5110473</itcc-ci:CostiProduzioneAcquistiServiziSanitariTrasportoSanitario>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariSocioSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >23858238</itcc-ci:CostiProduzioneAcquistiServiziSanitariSocioSanitarie>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariCompartecipazioneIntramoenia contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3096867</itcc-ci:CostiProduzioneAcquistiServiziSanitariCompartecipazioneIntramoenia>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariRimborsiAssegniContributiSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2316887</itcc-ci:CostiProduzioneAcquistiServiziSanitariRimborsiAssegniContributiSanitari>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariConsulenzeCollaborazioniInterinaleAltro contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1477638</itcc-ci:CostiProduzioneAcquistiServiziSanitariConsulenzeCollaborazioniInterinaleAltro>
+	<itcc-ci:CostiProduzioneAcquistiServiziSanitariAltriServiziRilevanzaSanitaria contextRef="i_31-12-2013" unitRef="eur" decimals="0" >280311</itcc-ci:CostiProduzioneAcquistiServiziSanitariAltriServiziRilevanzaSanitaria>		
+	<itcc-ci:CostiProduzioneTotaleAcquistiServiziSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >184158594</itcc-ci:CostiProduzioneTotaleAcquistiServiziSanitari>
+	<itcc-ci:CostiProduzioneAcquistiServiziNonSanitariServizi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >19042523</itcc-ci:CostiProduzioneAcquistiServiziNonSanitariServizi>
+	<itcc-ci:CostiProduzioneAcquistiServiziNonSanitariConsulenzeCollaborazioniInterinaleAltro contextRef="i_31-12-2013" unitRef="eur" decimals="0" >194225</itcc-ci:CostiProduzioneAcquistiServiziNonSanitariConsulenzeCollaborazioniInterinaleAltro>
+	<itcc-ci:CostiProduzioneAcquistiServiziNonSanitariFormazione contextRef="i_31-12-2013" unitRef="eur" decimals="0" >491438</itcc-ci:CostiProduzioneAcquistiServiziNonSanitariFormazione>	
+	<itcc-ci:CostiProduzioneTotaleAcquistiServiziNonSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >19728186</itcc-ci:CostiProduzioneTotaleAcquistiServiziNonSanitari>
+	<!-- altro -->
+	<itcc-ci:CostiProduzioneManutenzioneRiparazione contextRef="i_31-12-2013" unitRef="eur" decimals="0" >7861701</itcc-ci:CostiProduzioneManutenzioneRiparazione>
+	<itcc-ci:CostiProduzioneGodimentoBeniTerzi contextRef="d_31-12-2013" unitRef="eur" decimals="0" >3013427</itcc-ci:CostiProduzioneGodimentoBeniTerzi>
+	<itcc-ci:CostiProduzionePersonaleDirigenteMedico contextRef="i_31-12-2013" unitRef="eur" decimals="0" >40108925</itcc-ci:CostiProduzionePersonaleDirigenteMedico>
+	<itcc-ci:CostiProduzionePersonaleDirigenteSanitarioNonMedico contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4703432</itcc-ci:CostiProduzionePersonaleDirigenteSanitarioNonMedico>
+	<itcc-ci:CostiProduzionePersonaleCompartoSanitario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >48490298</itcc-ci:CostiProduzionePersonaleCompartoSanitario>
+	<itcc-ci:CostiProduzionePersonaleDirigenteNonSanitario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1673393</itcc-ci:CostiProduzionePersonaleDirigenteNonSanitario>
+	<itcc-ci:CostiProduzionePersonaleCompartoNonSanitario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >24589032</itcc-ci:CostiProduzionePersonaleCompartoNonSanitario>
+	<itcc-ci:CostiProduzionePersonaleTotaleCostiPersonale contextRef="d_31-12-2013" unitRef="eur" decimals="0" >119565081</itcc-ci:CostiProduzionePersonaleTotaleCostiPersonale>
+	<itcc-ci:CostiProduzioneOneriDiversiGestione contextRef="d_31-12-2013" unitRef="eur" decimals="0" >3035953</itcc-ci:CostiProduzioneOneriDiversiGestione>
+	<itcc-ci:CostiProduzioneAmmortamentiImmobilizzazioniImmateriali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >988827</itcc-ci:CostiProduzioneAmmortamentiImmobilizzazioniImmateriali>
+	<itcc-ci:CostiProduzioneAmmortamentiFabbricati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >6453778</itcc-ci:CostiProduzioneAmmortamentiFabbricati>
+	<itcc-ci:CostiProduzioneAmmortamentiAltreImmobilizzazioniMateriali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5221480</itcc-ci:CostiProduzioneAmmortamentiAltreImmobilizzazioniMateriali>
+	<itcc-ci:CostiProduzioneTotaleAmmortamenti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >12664086</itcc-ci:CostiProduzioneTotaleAmmortamenti>
+	<itcc-ci:CostiProduzioneSvalutazioneImmobilizzazioniCrediti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >838038</itcc-ci:CostiProduzioneSvalutazioneImmobilizzazioniCrediti>
+	<itcc-ci:CostiProduzioneVariazioniRimanenzeSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >279540</itcc-ci:CostiProduzioneVariazioniRimanenzeSanitarie>
+	<itcc-ci:CostiProduzioneVariazioniRimanenzeNonSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >69452</itcc-ci:CostiProduzioneVariazioniRimanenzeNonSanitarie>
+	<itcc-ci:CostiProduzioneTotaleVariazioniRimanenze contextRef="i_31-12-2013" unitRef="eur" decimals="0" >348992</itcc-ci:CostiProduzioneTotaleVariazioniRimanenze>
+	<itcc-ci:CostiProduzioneAccantonamentiRischi contextRef="i_31-12-2013" unitRef="eur" decimals="0">830600</itcc-ci:CostiProduzioneAccantonamentiRischi>
+	<itcc-ci:CostiProduzioneAccantonamentiPremioOperosita contextRef="i_31-12-2013" unitRef="eur" decimals="0" >113441</itcc-ci:CostiProduzioneAccantonamentiPremioOperosita>
+	<itcc-ci:CostiProduzioneAccantonamentiQuoteInutilizzateContributiVincolati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4344862</itcc-ci:CostiProduzioneAccantonamentiQuoteInutilizzateContributiVincolati>
+	<itcc-ci:CostiProduzioneAltriAccantonamenti contextRef="i_31-12-2013" unitRef="eur" decimals="0">1500957</itcc-ci:CostiProduzioneAltriAccantonamenti>
+	<itcc-ci:CostiProduzioneTotaleAccantonamenti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >6789859</itcc-ci:CostiProduzioneTotaleAccantonamenti>
+	<itcc-ci:TotaleCostiProduzione contextRef="d_31-12-2013" unitRef="eur" decimals="0" >406718503</itcc-ci:TotaleCostiProduzione>
+	<!-- fine costi -->	
+	<itcc-ci:ProventiOneriFinanziariInteressiAttiviAltriProventiFinanziari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2966</itcc-ci:ProventiOneriFinanziariInteressiAttiviAltriProventiFinanziari>
+	<itcc-ci:ProventiOneriFinanziariInteressiPassiviAltriOneriFinanziari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1088986</itcc-ci:ProventiOneriFinanziariInteressiPassiviAltriOneriFinanziari>
+	<itcc-ci:TotaleProventiOneriFinanziari contextRef="d_31-12-2013" unitRef="eur" decimals="0" >-1086020</itcc-ci:TotaleProventiOneriFinanziari>
+	<itcc-ci:ProventiOneriStraordinariProventiPlusvalenzeAlienazioniCuiRicaviNonSonoIscrivibiliN5 contextRef="d_31-12-2013" unitRef="eur" decimals="0">25664</itcc-ci:ProventiOneriStraordinariProventiPlusvalenzeAlienazioniCuiRicaviNonSonoIscrivibiliN5>
+	<itcc-ci:ProventiOneriStraordinariProventiAltri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >2657993</itcc-ci:ProventiOneriStraordinariProventiAltri>
+	<itcc-ci:ProventiOneriStraordinariProventiTotaleProventi contextRef="d_31-12-2013" unitRef="eur" decimals="0" >2683657</itcc-ci:ProventiOneriStraordinariProventiTotaleProventi>
+	<itcc-ci:ProventiOneriStraordinariOneriMinusvalenzeAlienazioniCuiEffettiContabiliNonSonoIscrivibiliN14 contextRef="d_31-12-2013" unitRef="eur" decimals="0">39306</itcc-ci:ProventiOneriStraordinariOneriMinusvalenzeAlienazioniCuiEffettiContabiliNonSonoIscrivibiliN14>
+	<itcc-ci:ProventiOneriStraordinariOneriAltri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >2680538</itcc-ci:ProventiOneriStraordinariOneriAltri>
+	<itcc-ci:ProventiOneriStraordinariOneriTotaleOneri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >2719844</itcc-ci:ProventiOneriStraordinariOneriTotaleOneri>	
+	<itcc-ci:TotalePartiteStraordinarie contextRef="d_31-12-2013" unitRef="eur" decimals="0" >-36186</itcc-ci:TotalePartiteStraordinarie>
+	<itcc-ci:RisultatoPrimaImposte contextRef="d_31-12-2013" unitRef="eur" decimals="0" >8125068</itcc-ci:RisultatoPrimaImposte>
+	<!-- Imposte -->
+	<itcc-ci:ImposteRedditoEsercizioIRAPPersonaleDipendente contextRef="i_31-12-2013" unitRef="eur" decimals="0" >7243784</itcc-ci:ImposteRedditoEsercizioIRAPPersonaleDipendente>
+	<itcc-ci:ImposteRedditoEsercizioIRAPCollaboratoriAssimilatiDipendente contextRef="i_31-12-2013" unitRef="eur" decimals="0" >420891</itcc-ci:ImposteRedditoEsercizioIRAPCollaboratoriAssimilatiDipendente>
+	<itcc-ci:ImposteRedditoEsercizioIRAPLiberaProfessioneIntramoenia contextRef="i_31-12-2013" unitRef="eur" decimals="0" >223324</itcc-ci:ImposteRedditoEsercizioIRAPLiberaProfessioneIntramoenia>
+	<itcc-ci:ImposteRedditoEsercizioIRAPAttivitaCommerciali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3522</itcc-ci:ImposteRedditoEsercizioIRAPAttivitaCommerciali>
+	<itcc-ci:ImposteRedditoEsercizioTotaleIRAP contextRef="i_31-12-2013" unitRef="eur" decimals="0" >7891521</itcc-ci:ImposteRedditoEsercizioTotaleIRAP>
+	<itcc-ci:ImposteRedditoEsercizioIRES contextRef="i_31-12-2013" unitRef="eur" decimals="0" >211103</itcc-ci:ImposteRedditoEsercizioIRES>
+	<itcc-ci:ImposteRedditoEsercizioTotaleImposteRedditoEsercizio contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8102624</itcc-ci:ImposteRedditoEsercizioTotaleImposteRedditoEsercizio>
+	<itcc-ci:UtilePerditaEsercizio contextRef="d_31-12-2013" unitRef="eur" decimals="0" >22443</itcc-ci:UtilePerditaEsercizio>
+	<!-- fine conto economico inizio anagrafica -->
+	<itcc-ci:DatiAnagraficiRegioneProvinciaAutonoma contextRef="i_31-12-2013" >Toscana</itcc-ci:DatiAnagraficiRegioneProvinciaAutonoma>
+	<itcc-ci:DatiAnagraficiDenominazione contextRef="i_31-12-2013">Azienda Sanitaria Locale 11</itcc-ci:DatiAnagraficiDenominazione>
+	<itcc-ci:DatiAnagraficiCapitaleSocialeInteramenteVersato contextRef="i_31-12-2013">false</itcc-ci:DatiAnagraficiCapitaleSocialeInteramenteVersato>
+	<itcc-ci:DatiAnagraficiCodiceFiscale contextRef="i_31-12-2013">ASL11</itcc-ci:DatiAnagraficiCodiceFiscale>	
+</xbrl>

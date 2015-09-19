@@ -35,26 +35,26 @@ namespace Confronti
               try {
                   // process file #1
                   // check if it has xml extension
-                  if ((userPostedFile1.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xml"))
+                  if ((userPostedFile1.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xbrl") && (userPostedFile2.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xbrl"))
                   {
                       MyString = new StreamReader(userPostedFile1.InputStream).ReadToEnd();
                       Session["xmlfile1"] = MyString;
                       Span1.InnerHtml += "<u>File #1</u><br>";
-                      Span1.InnerHtml += "File Content Type: " +  userPostedFile1.ContentType      + "<br>";
+                      Span1.InnerHtml += "File Content Type: " + userPostedFile1.ContentType + "<br>";
                       Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
                       Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
 
-                  }
-                  // process file #2
-                  if ((userPostedFile2.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xml"))
-                  {
+                      // process file #2
                       MyString = new StreamReader(userPostedFile2.InputStream).ReadToEnd();
                       Session["xmlfile2"] = MyString;
                       Span1.InnerHtml += "<u>File #2</u><br>";
                       Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
                       Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
                       Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
+
                   }
+                  else Span1.InnerHtml = "Error: minimum is two files or file is not in .xbrl extension";
+                  
 
               } catch(Exception Ex) {
                   Span1.InnerHtml = "Error: <br>" + Ex.Message;
@@ -72,15 +72,16 @@ namespace Confronti
             {
                 Span2.InnerHtml = "ERROR: " + e.Message;
             }
+            else Span2.InnerHtml = "UNH: " + e.Message;
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
         {
-            string xsdfilepath = Server.MapPath("\\Test\\shiporder.xsd");
+            string xsdfilepath = Server.MapPath("\\Test\\itvedo-ci-ese-2015-05-22.xsd");
             // Create the XmlSchemaSet class.
             XmlSchemaSet sc = new XmlSchemaSet();
             // Add the schema to the collection
-            sc.Add("http://vedovator.it/shiporder.xsd", xsdfilepath);
+            sc.Add("http://www.infocamere.it/itnn/fr/itcc/ci/ese/2014-11-17", xsdfilepath);
             
             ValidationEventHandler veh = new ValidationEventHandler(xbrlValidationEventHandler);
             XmlDocument doc = new XmlDocument();

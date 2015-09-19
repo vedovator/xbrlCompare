@@ -90,14 +90,19 @@
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config" />
     <None Include="scripts\jquery-2.1.4.intellisense.js" />
-    <Content Include="scripts\jquery-2.1.4.js" />
     <Content Include="scripts\jquery-2.1.4.min.js" />
     <Content Include="scripts\jquery.canvasjs.min.js" />
+    <Content Include="scripts\xbrl.vedo.js" />
     <Content Include="Site.Master" />
-    <Content Include="Test\mps1.json" />
-    <Content Include="Test\mps2.json" />
     <Content Include="scripts\jquery-2.1.4.min.map" />
+    <Content Include="Test\IstanzaCareggi2013.xbrl" />
+    <Content Include="Test\IstanzaEmpoli2013.xbrl" />
+    <Content Include="Test\Careggi.json" />
+    <Content Include="Test\Asl11.json" />
     <None Include="Test\itcc-ci-2014-11-17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Test\itcc-ci-part-2014-11-17.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Test\itvedo-ci-ese-2015-05-22.xsd">

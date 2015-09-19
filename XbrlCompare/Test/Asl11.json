@@ -1,0 +1,1161 @@
+﻿{
+    "?xml": {
+        "@version": "1.0",
+        "@encoding": "UTF-8"
+    },
+    "xbrl": {
+        "@xmlns": "http://www.xbrl.org/2003/instance",
+        "@xmlns:link": "http://www.xbrl.org/2003/linkbase",
+        "@xmlns:xlink": "http://www.w3.org/1999/xlink",
+        "@xmlns:itcc-ci": "http://www.infocamere.it/itnn/fr/itcc/ci/2013-01-04",
+        "@xmlns:itcc-ci-ese": "http://www.infocamere.it/itnn/fr/itcc/ci/ese/2013-01-04",
+        "@xmlns:iso4217": "http://www.xbrl.org/2003/iso4217",
+        "link:schemaRef": {
+            "@xlink:type": "simple",
+            "@xlink:arcrole": "http://www.w3.org/1999/xlink/properties/linkbase",
+            "@xlink:href": "itcc-ci-ese-2013-01-04.xsd"
+        },
+        "context": [
+            {
+                "@id": "i_31-12-2012",
+                "entity": {
+                    "identifier": {
+                        "@scheme": "http://www.infocamere.it",
+                        "#text": "Careggi"
+                    }
+                },
+                "period": {
+                    "instant": "2012-12-31"
+                },
+                "scenario": {
+                    "itcc-ci-ese:scen": "Depositato"
+                }
+            },
+            {
+                "@id": "d_31-12-2012",
+                "entity": {
+                    "identifier": {
+                        "@scheme": "http://www.infocamere.it",
+                        "#text": "Careggi"
+                    }
+                },
+                "period": {
+                    "startDate": "2012-01-01",
+                    "endDate": "2012-12-31"
+                },
+                "scenario": {
+                    "itcc-ci-ese:scen": "Depositato"
+                }
+            },
+            {
+                "@id": "i_31-12-2013",
+                "entity": {
+                    "identifier": {
+                        "@scheme": "http://www.infocamere.it",
+                        "#text": "Careggi"
+                    }
+                },
+                "period": {
+                    "instant": "2013-12-31"
+                },
+                "scenario": {
+                    "itcc-ci-ese:scen": "Depositato"
+                }
+            },
+            {
+                "@id": "d_31-12-2013",
+                "entity": {
+                    "identifier": {
+                        "@scheme": "http://www.infocamere.it",
+                        "#text": "Careggi"
+                    }
+                },
+                "period": {
+                    "startDate": "2013-01-01",
+                    "endDate": "2013-12-31"
+                },
+                "scenario": {
+                    "itcc-ci-ese:scen": "Depositato"
+                }
+            }
+        ],
+        "unit": {
+            "@id": "eur",
+            "measure": "iso4217:EUR"
+        },
+        "itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1262405"
+        },
+        "itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1365624"
+        },
+        "itcc-ci:ImmobilizzazioniImmaterialiAltre": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2972630"
+        },
+        "itcc-ci:TotaleImmobilizzazioniImmateriali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5600659"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "255860"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiTerreniIndisponibili": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2282308"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "469588"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "177448458"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "180456214"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5414433"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1430713"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2708286"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureAutomezzi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "121425"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiAltriBeni": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "21741"
+        },
+        "itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "371763"
+        },
+        "itcc-ci:TotaleImmobilizzazioniMateriali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "190524575"
+        },
+        "itcc-ci:ImmobilizzazioniFinanziariePartecipazioni": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "149447"
+        },
+        "itcc-ci:TotaleImmobilizzazioni": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "196274681"
+        },
+        "#comment": [
+        ],
+        "itcc-ci:RimanenzeBeniSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3773114"
+        },
+        "itcc-ci:RimanenzeBeniNonSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "105318"
+        },
+        "itcc-ci:TotaleRimanenze": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3878432"
+        },
+        "itcc-ci:CreditiVersoStatoEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "351302"
+        },
+        "itcc-ci:CreditiVersoStatoTotaleCreditiVersoStato": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "351302"
+        },
+        "itcc-ci:CreditiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "114859657"
+        },
+        "itcc-ci:CreditiVersoRegioneProvinciaAutonomaEsigibiliOltreEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "9882360"
+        },
+        "itcc-ci:CreditiVersoRegioneProvinciaAutonomaTotaleCreditiVersoRegioneProvinciaAutonoma": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "124778017"
+        },
+        "itcc-ci:CreditiVersoComuniEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5259389"
+        },
+        "itcc-ci:CreditiVersoComuniTotaleCreditiVersoComuni": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5259389"
+        },
+        "itcc-ci:CreditiVersoAziendeSanitariePubblicheEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "825088"
+        },
+        "itcc-ci:CreditiVersoAziendeSanitariePubblicheTotaleCreditiVersoAziendeSanitariePubbliche": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "825088"
+        },
+        "itcc-ci:CreditiVersoPartecipateEntiRegionaliEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "135641"
+        },
+        "itcc-ci:CreditiVersoPartecipateEntiRegionaliTotaleCreditiPartecipateEntiRegionali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "135641"
+        },
+        "itcc-ci:CreditiVersoErarioEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "16530"
+        },
+        "itcc-ci:CreditiVersoErarioTotaleVersoErario": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "16530"
+        },
+        "itcc-ci:CreditiVersoAltriEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "11899124"
+        },
+        "itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "341201"
+        },
+        "itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "12240325"
+        },
+        "itcc-ci:TotaleCrediti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "143606292"
+        },
+        "itcc-ci:DisponibilitaLiquideDanaroValoriCassa": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "232513"
+        },
+        "itcc-ci:DisponibilitaLiquideIstitutoTesoriere": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "4759563"
+        },
+        "itcc-ci:DisponibilitaLiquideContoCorrentePostale": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "22368"
+        },
+        "itcc-ci:TotaleDisponibilitaLiquide": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5014444"
+        },
+        "itcc-ci:TotaleAttivoCircolante": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "152499168"
+        },
+        "itcc-ci:AttivoRateiRiscontiRateiAttivi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3940"
+        },
+        "itcc-ci:AttivoRateiRiscontiRiscontiAttivi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "21671"
+        },
+        "itcc-ci:AttivoRateiRiscontiRateiRiscontiAttivi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "25611"
+        },
+        "itcc-ci:TotaleAttivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "348799460"
+        },
+        "itcc-ci:CanoniLeasingDaPagare": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "79466"
+        },
+        "itcc-ci:DepositiCauzionali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2729458"
+        },
+        "itcc-ci:BeniInComodato": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "395745"
+        },
+        "itcc-ci:AltriContiOrdine": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "7725744"
+        },
+        "itcc-ci:TotaleContiOrdine": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "10930413"
+        },
+        "itcc-ci:PatrimonioNettoFondoDotazione": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3598434"
+        },
+        "itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiBeniPrimaDotazione": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "33701572"
+        },
+        "itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaRegione": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "74090093"
+        },
+        "itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaAltriPubblici": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1644883"
+        },
+        "itcc-ci:PatrimonioNettoFinanziamentiPerInvestimentiDaRettificaContributi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "407823"
+        },
+        "itcc-ci:PatrimonioNettoTotaleFinanziamentiPerInvestimenti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "151708270"
+        },
+        "itcc-ci:PatrimonioNettoRiserveDonazioniLascitiVincolati": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "66710"
+        },
+        "itcc-ci:PatrimonioNettoAltreRiserve": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "958736"
+        },
+        "itcc-ci:PatrimonioNettoUtiliPerditePortatiNuovo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "-19446190"
+        },
+        "itcc-ci:PatrimonioNettoUtilePerditaEsercizioUtilePerditaEsercizio": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "22444"
+        },
+        "itcc-ci:TotalePatrimonioNetto": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "136908404"
+        },
+        "itcc-ci:FondiRischiOneriRischi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "4056106"
+        },
+        "itcc-ci:FondiRischiOneriQuotaInutilizzataContributiVincolati": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "10775637"
+        },
+        "itcc-ci:FondiRischiOneriAltri": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "8562673"
+        },
+        "itcc-ci:TotaleFondiRischiOneri": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "23394416"
+        },
+        "itcc-ci:TrattamentoFineRapportoPremiOperosita": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1216476"
+        },
+        "itcc-ci:TotaleTrattamentoFineRapporto": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1216476"
+        },
+        "itcc-ci:DebitiMutuiPassiviEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "201273"
+        },
+        "itcc-ci:DebitiMutuiPassiviEsigibiliOltreEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "14063221"
+        },
+        "itcc-ci:DebitiMutuiPassiviTotaleMutuiPassivi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "14264494"
+        },
+        "itcc-ci:DebitiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "67108085"
+        },
+        "itcc-ci:DebitiVersoRegioneProvinciaAutonomaEsigibiliOltreEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1480000"
+        },
+        "itcc-ci:DebitiVersoRegioneProvinciaAutonomaTotaleDebitiVersoRegioneProvinciaAutonoma": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "68588085"
+        },
+        "itcc-ci:DebitiVersoAziendeSanitariePubblicheEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1150554"
+        },
+        "itcc-ci:DebitiVersoAziendeSanitariePubblicheTotaleDebitiVersoAziendeSanitariePubbliche": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1150554"
+        },
+        "itcc-ci:DebitiVersoPartecipateEntiRegionaliEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "74309"
+        },
+        "itcc-ci:DebitiVersoPartecipateEntiRegionaliTotaleVersoPartecipateEntiRegionali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "74309"
+        },
+        "itcc-ci:DebitiDebitiVersoFornitoriEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "42017144"
+        },
+        "itcc-ci:DebitiDebitiVersoFornitoriTotaleDebitiVersoFornitori": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "42017144"
+        },
+        "itcc-ci:DebitiVersoIstitutoTesoriereEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "19734500"
+        },
+        "itcc-ci:DebitiVersoIstitutoTesoriereTotaleVersoIstitutoTesoriere": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "19734500"
+        },
+        "itcc-ci:DebitiDebitiTributariEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5799044"
+        },
+        "itcc-ci:DebitiDebitiTributariTotaleDebitiTributari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5799044"
+        },
+        "itcc-ci:DebitiDebitiVersoIstitutiPrevidenzaSicurezzaSocialeEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "8571131"
+        },
+        "itcc-ci:DebitiDebitiVersoIstitutiPrevidenzaSicurezzaSocialeTotaleDebitiVersoIstitutiPrevidenzaSicurezzaSociale": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "8571131"
+        },
+        "itcc-ci:DebitiAltriDebitiEsigibiliEntroEsercizioSuccessivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "26068043"
+        },
+        "itcc-ci:DebitiAltriDebitiTotaleAltriDebiti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "26068043"
+        },
+        "itcc-ci:TotaleDebiti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "170724053"
+        },
+        "itcc-ci:PassivoRateiRiscontiRateiPassivi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "352249"
+        },
+        "itcc-ci:PassivoRateiRiscontiRiscontiPassivi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "660641"
+        },
+        "itcc-ci:PassivoRateiRiscontiTotaleRateiRisconti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1012890"
+        },
+        "itcc-ci:TotalePassivo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "348799460"
+        },
+        "itcc-ci:ValoreProduzioneContributiContoEsercizioDaRegionePerQuotaFSRegionale": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "346474758"
+        },
+        "itcc-ci:ValoreProduzioneContributiContoEsercizioExtraFondoDaRegioneVincolati": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3606021"
+        },
+        "itcc-ci:ValoreProduzioneContributiContoEsercizioExtraFondoDaAltriSoggettiPubblici": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "8969440"
+        },
+        "itcc-ci:ValoreProduzioneContributiContoEsercizioTotaleExtraFondo": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "12525461"
+        },
+        "itcc-ci:ValoreProduzioneTotaleContributiContoEsercizio": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "359050220"
+        },
+        "itcc-ci:ValoreProduzioneRettificaContributiContoEsercizioPerInvestimenti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "-900012"
+        },
+        "itcc-ci:ValoreProduzioneUtilizzoFondiQuoteInutilizzateContributiVincolatiEserciziPrecedenti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2688353"
+        },
+        "itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieAdAziendePubbliche": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "15843998"
+        },
+        "itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieIntramoenia": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "4599982"
+        },
+        "itcc-ci:ValoreProduzioneRicaviPrestazioniSanitarieAltro": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5942762"
+        },
+        "itcc-ci:ValoreProduzioneTotaleRicaviPrestazioniSanitarie": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "26386742"
+        },
+        "itcc-ci:ValoreProduzioneConcorsiRecuperiRimborsi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "9553143"
+        },
+        "itcc-ci:ValoreProduzioneCompartecipazioneAllaSpesaPerPrestazioniSanitarie": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "9984785"
+        },
+        "itcc-ci:ValoreProduzioneQuotaContributiContoCapitaleImputataEsercizio": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "7979846"
+        },
+        "itcc-ci:ValoreProduzioneAltriRicaviProventi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1222700"
+        },
+        "itcc-ci:TotaleValoreProduzione": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "415965776"
+        },
+        "itcc-ci:CostiProduzioneAcquistiBeniSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "47415899"
+        },
+        "itcc-ci:CostiProduzioneAcquistiBeniNonSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1289686"
+        },
+        "itcc-ci:CostiProduzioneTotaleAcquistiBeni": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "48714585"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariMedicinaDiBase": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "26017834"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariFarmaceutica": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "30941988"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariSpecialisticaAmbulatoriale": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "18046746"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaRiabilitativa": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2548534"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaIntegrativa": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "4640952"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaProtesica": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1159086"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariAssistenzaOspedaliera": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "51833850"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariPsichiatricaResidenziale": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1740746"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariDistribuzioneFarmaciFileF": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "10765765"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariTermaliInConvenzione": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "322681"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariTrasportoSanitario": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5110473"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariSocioSanitarie": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "23858238"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariCompartecipazioneIntramoenia": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3096867"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariRimborsiAssegniContributiSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2316887"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariConsulenzeCollaborazioniInterinaleAltro": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1477638"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziSanitariAltriServiziRilevanzaSanitaria": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "280311"
+        },
+        "itcc-ci:CostiProduzioneTotaleAcquistiServiziSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "184158594"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziNonSanitariServizi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "19042523"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziNonSanitariConsulenzeCollaborazioniInterinaleAltro": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "194225"
+        },
+        "itcc-ci:CostiProduzioneAcquistiServiziNonSanitariFormazione": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "491438"
+        },
+        "itcc-ci:CostiProduzioneTotaleAcquistiServiziNonSanitari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "19728186"
+        },
+        "itcc-ci:CostiProduzioneManutenzioneRiparazione": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "7861701"
+        },
+        "itcc-ci:CostiProduzioneGodimentoBeniTerzi": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3013427"
+        },
+        "itcc-ci:CostiProduzionePersonaleDirigenteMedico": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "40108925"
+        },
+        "itcc-ci:CostiProduzionePersonaleDirigenteSanitarioNonMedico": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "4703432"
+        },
+        "itcc-ci:CostiProduzionePersonaleCompartoSanitario": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "48490298"
+        },
+        "itcc-ci:CostiProduzionePersonaleDirigenteNonSanitario": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1673393"
+        },
+        "itcc-ci:CostiProduzionePersonaleCompartoNonSanitario": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "24589032"
+        },
+        "itcc-ci:CostiProduzionePersonaleTotaleCostiPersonale": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "119565081"
+        },
+        "itcc-ci:CostiProduzioneOneriDiversiGestione": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3035953"
+        },
+        "itcc-ci:CostiProduzioneAmmortamentiImmobilizzazioniImmateriali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "988827"
+        },
+        "itcc-ci:CostiProduzioneAmmortamentiFabbricati": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "6453778"
+        },
+        "itcc-ci:CostiProduzioneAmmortamentiAltreImmobilizzazioniMateriali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "5221480"
+        },
+        "itcc-ci:CostiProduzioneTotaleAmmortamenti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "12664086"
+        },
+        "itcc-ci:CostiProduzioneSvalutazioneImmobilizzazioniCrediti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "838038"
+        },
+        "itcc-ci:CostiProduzioneVariazioniRimanenzeSanitarie": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "279540"
+        },
+        "itcc-ci:CostiProduzioneVariazioniRimanenzeNonSanitarie": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "69452"
+        },
+        "itcc-ci:CostiProduzioneTotaleVariazioniRimanenze": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "348992"
+        },
+        "itcc-ci:CostiProduzioneAccantonamentiRischi": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "830600"
+        },
+        "itcc-ci:CostiProduzioneAccantonamentiPremioOperosita": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "113441"
+        },
+        "itcc-ci:CostiProduzioneAccantonamentiQuoteInutilizzateContributiVincolati": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "4344862"
+        },
+        "itcc-ci:CostiProduzioneAltriAccantonamenti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1500957"
+        },
+        "itcc-ci:CostiProduzioneTotaleAccantonamenti": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "6789859"
+        },
+        "itcc-ci:TotaleCostiProduzione": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "406718503"
+        },
+        "itcc-ci:ProventiOneriFinanziariInteressiAttiviAltriProventiFinanziari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2966"
+        },
+        "itcc-ci:ProventiOneriFinanziariInteressiPassiviAltriOneriFinanziari": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "1088986"
+        },
+        "itcc-ci:TotaleProventiOneriFinanziari": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "-1086020"
+        },
+        "itcc-ci:ProventiOneriStraordinariProventiPlusvalenzeAlienazioniCuiRicaviNonSonoIscrivibiliN5": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "25664"
+        },
+        "itcc-ci:ProventiOneriStraordinariProventiAltri": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2657993"
+        },
+        "itcc-ci:ProventiOneriStraordinariProventiTotaleProventi": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2683657"
+        },
+        "itcc-ci:ProventiOneriStraordinariOneriMinusvalenzeAlienazioniCuiEffettiContabiliNonSonoIscrivibiliN14": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "39306"
+        },
+        "itcc-ci:ProventiOneriStraordinariOneriAltri": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2680538"
+        },
+        "itcc-ci:ProventiOneriStraordinariOneriTotaleOneri": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "2719844"
+        },
+        "itcc-ci:TotalePartiteStraordinarie": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "-36186"
+        },
+        "itcc-ci:RisultatoPrimaImposte": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "8125068"
+        },
+        "itcc-ci:ImposteRedditoEsercizioIRAPPersonaleDipendente": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "7243784"
+        },
+        "itcc-ci:ImposteRedditoEsercizioIRAPCollaboratoriAssimilatiDipendente": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "420891"
+        },
+        "itcc-ci:ImposteRedditoEsercizioIRAPLiberaProfessioneIntramoenia": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "223324"
+        },
+        "itcc-ci:ImposteRedditoEsercizioIRAPAttivitaCommerciali": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "3522"
+        },
+        "itcc-ci:ImposteRedditoEsercizioTotaleIRAP": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "7891521"
+        },
+        "itcc-ci:ImposteRedditoEsercizioIRES": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "211103"
+        },
+        "itcc-ci:ImposteRedditoEsercizioTotaleImposteRedditoEsercizio": {
+            "@contextRef": "i_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "8102624"
+        },
+        "itcc-ci:UtilePerditaEsercizio": {
+            "@contextRef": "d_31-12-2013",
+            "@unitRef": "eur",
+            "@decimals": "0",
+            "#text": "22443"
+        },
+        "itcc-ci:DatiAnagraficiRegioneProvinciaAutonoma": {
+            "@contextRef": "i_31-12-2013",
+            "#text": "Toscana"
+        },
+        "itcc-ci:DatiAnagraficiDenominazione": {
+            "@contextRef": "i_31-12-2013",
+            "#text": "Azienda Sanitaria Locale 11"
+        },
+        "itcc-ci:DatiAnagraficiCapitaleSocialeInteramenteVersato": {
+            "@contextRef": "i_31-12-2013",
+            "#text": "false"
+        },
+        "itcc-ci:DatiAnagraficiCodiceFiscale": {
+            "@contextRef": "i_31-12-2013",
+            "#text": "ASL11"
+        }
+    }
+}
