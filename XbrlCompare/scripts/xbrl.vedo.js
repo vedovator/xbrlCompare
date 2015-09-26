@@ -15,9 +15,39 @@ function splitCamel(name) {
 }
 
 
-function aggregateTitles(concepts) {
-    // extract aggregated titels from array of xbrl concepts
-    var data = [{}];
+function aggregateTitles(finrep) {
+    // extract aggregated titles as an array from xbrl financial report
+    var titles = [];
+    jQuery.each(finrep.xbrl, function (i, item) {
+        if (i.substring(0, 8) === "itcc-ci:") {
+            var b = splitCamel(i.replace("itcc-ci:", ""));
+            titles.push(b);
+        } else { console.log("***" + i) };
+    });
 
+    var fstLvlAgg = [];
+    jQuery.each(titles, function (i, item) {
+        var str = splitCamel(item);
+        // if second level is needed just add this: + str.split(" ")[1]
+        var res = str.split(" ")[0];
+        fstLvlAgg.push(res);
+    });
+    fstLvlAgg = $.unique(fstLvlAgg);
+    return fstLvlAgg;
+}
+
+function getYears(finrep) {
+    var items = finrep.xbrl.context;
+    var anni = [];
+    jQuery.each(items, function (i, item) {
+        if (typeof item.period.instant === "undefined") {
+            item.year = item.period.endDate.substring(0, 4);
+        } else {
+            item.year = item.period.instant.substring(0, 4);
+        }
+        anni.push(item.year);
+    });
+    anni = $.unique(anni);
+    return anni;
 }
 

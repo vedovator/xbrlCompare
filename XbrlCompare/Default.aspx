@@ -58,12 +58,14 @@
         <option value ="pie">Torta</option>
         <option value ="doughnut">Ciambella</option>
     </select>
-    <select id="catSelect" style="font-size:1.4em; margin: 10px;">
-        <option value ="CEvp">Conto Economico-Valore della Produzione</option>
-        <option value ="CEcp">Conto Economico-Costi della Produzione</option>
-        <option value ="SPat">Stato Patrimoniale - Attivo</option>
-        <option value ="SPpa">Stato Patrimoniale - Passivo</option>
+    Anno <select id="yearSelect" style="font-size:1.4em; margin: 10px;"></select>
+    Sezione <select id="catSelect" style="font-size:1.4em; margin: 10px;">
     </select>
+        <br />
+    Bilancio in <span id="currency"></span>
+    <input type="button" id="go" value="  show data  " style="font-size:1.4em; margin: 10px;" />
+    <br />
+    
     <br />
     <div id="chartContainer1" style="height: 360px; width: 45%; margin: 10px;float:left;"></div>
     <div id="chartContainer2" style="height: 360px; width: 45%; margin: 10px;float:right;"></div>
@@ -71,6 +73,41 @@
 <script type="text/javascript">
 
     $(function () {
+
+        var bilancio = { "?xml": { "@version": "1.0", "@encoding": "UTF-8" }, "xbrl": { "@xmlns": "http://www.xbrl.org/2003/instance", "@xmlns:link": "http://www.xbrl.org/2003/linkbase", "@xmlns:xlink": "http://www.w3.org/1999/xlink", "@xmlns:itcc-ci": "http://www.infocamere.it/itnn/fr/itcc/ci/2013-01-04", "@xmlns:itcc-ci-ese": "http://www.infocamere.it/itnn/fr/itcc/ci/ese/2013-01-04", "@xmlns:iso4217": "http://www.xbrl.org/2003/iso4217", "link:schemaRef": { "@xlink:type": "simple", "@xlink:arcrole": "http://www.w3.org/1999/xlink/properties/linkbase", "@xlink:href": "itcc-ci-ese-2013-01-04.xsd" }, "context": [{ "@id": "i_31-12-2012", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "instant": "2012-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }, { "@id": "d_31-12-2012", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "startDate": "2012-01-01", "endDate": "2012-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }, { "@id": "i_31-12-2013", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "instant": "2013-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }, { "@id": "d_31-12-2013", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "startDate": "2013-01-01", "endDate": "2013-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }], "unit": { "@id": "eur", "measure": "iso4217:EUR" }, "itcc-ci:ImmobilizzazioniImmaterialiCostiImpiantoAmpliamento": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "5989" }, "itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "1195920" }, "itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "371224" }, "itcc-ci:ImmobilizzazioniImmaterialiAltre": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "15851342" }, "itcc-ci:TotaleImmobilizzazioniImmateriali": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "17424475" }, "itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "68534" }, "itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "20758038" }, "itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "304529837" }, "itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "325356409" }, "itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "31421494" }, "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "22278028" }, "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "7514557" }, "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureAutomezzi": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "18426" }, "itcc-ci:ImmobilizzazioniMaterialiAltriBeni": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "486528" }, "itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "76954775" }, "itcc-ci:TotaleImmobilizzazioniMateriali": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "464030217" }, "itcc-ci:TotaleImmobilizzazioni": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "481668726" }, "itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "500" }, "itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri": [{ "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "500" }, { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "24144129" }], "itcc-ci:ImmobilizzazioniFinanziariePartecipazioni": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "213534" }, "#comment": [], "itcc-ci:RimanenzeBeniSanitari": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "21402053" }, "itcc-ci:RimanenzeBeniNonSanitari": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "940189" }, "itcc-ci:RimanenzeAccontiAcquistiBeniSanitari": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "379594" }, "itcc-ci:TotaleRimanenze": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "22721837" } } };
+
+        // do some cleaning and initialization
+        delete bilancio["?xml"];
+        delete bilancio.xbrl["link:schemaRef"];
+        delete bilancio.xbrl["@xmlns:link"];
+        delete bilancio.xbrl["@xmlns:xlink"];
+        delete bilancio.xbrl["@xmlns"];
+        delete bilancio.xbrl["@xmlns:itcc-ci"];
+        delete bilancio.xbrl["@xmlns:itcc-ci-ese"];
+        delete bilancio.xbrl["@xmlns:iso4217"];
+        // get years from financial reports and bind them to select
+        var years = getYears(bilancio);
+        $.each(years, function (i, item) {
+            $('#yearSelect').append($('<option>', {
+                value: item,
+                text: item
+            }));
+        });
+
+        // Get titles from financial reports and bind them to select
+        var titles = aggregateTitles(bilancio);
+        $.each(titles, function (i, item) {
+            $('#catSelect').append($('<option>', {
+                value: item,
+                text: item
+            }));
+        });
+
+        delete bilancio.xbrl.context;
+        // show current currency
+        $('#currency').text(bilancio.xbrl.unit.measure);
+        delete bilancio.xbrl.unit;
+
         // set up chart #1
         $("#chartContainer1").CanvasJSChart({
             title: {
@@ -87,17 +124,7 @@
 			    indexLabelFontColor: "dimgrey",
 			    indexLabelLineColor: "darkgrey",
 			    toolTipContent: "{y} €",
-
-
-			    dataPoints: [
-				{ y: 458756, indexLabel: "Costi Personale sanitario {y}€" },
-				{ y: 448875, indexLabel: "Costi Personale non sanitario {y}€" },
-				{ y: 82564, indexLabel: "Costi Dirigenza Sanitaria {y}€" },
-				{ y: 78554, indexLabel: "Costi Dirigenza non sanitaria {y}€" },
-				{ y: 154326, indexLabel: "Costi XYZ {y}€" },
-				{ y: 89657, indexLabel: "Others {y}€" }
-
-			    ]
+			    dataPoints: []
 			}
             ]
         });
@@ -117,20 +144,11 @@
 			    indexLabelFontColor: "dimgrey",
 			    indexLabelLineColor: "darkgrey",
 			    toolTipContent: "{y} €",
-
-			    dataPoints: [
-				{ y: 258756, indexLabel: "Costi Personale sanitario {y}€" },
-				{ y: 348875, indexLabel: "Costi Personale non sanitario {y}€" },
-				{ y: 122564, indexLabel: "Costi Dirigenza Sanitaria {y}€" },
-				{ y: 118554, indexLabel: "Costi Dirigenza non sanitaria {y}€" },
-				{ y: 134326, indexLabel: "Costi XYZ {y}€" },
-				{ y: 69657, indexLabel: "Others {y}€" }
-
-			    ]
+			    dataPoints: []
 			}
             ]
         });
-        // handle change chart type event
+        // handle chart type change event
         $('#typeSelect').change(function () {
             var chart1 = $("#chartContainer1").CanvasJSChart();
             var chart2 = $("#chartContainer2").CanvasJSChart();
@@ -139,6 +157,46 @@
             chart1.render();
             chart2.render();
         });
+
+        // handle section change event
+        $('#catSelect').change(function () {
+            var chart1 = $("#chartContainer1").CanvasJSChart();
+            var chart2 = $("#chartContainer2").CanvasJSChart();
+            // bind chart data
+            var chartData = [];
+            jQuery.each(bilancio.xbrl, function (i, item) {
+                
+                var wordLength = $('#catSelect').val().length;
+                if ($('#catSelect').val() === i.replace("itcc-ci:", "").substring(0, wordLength)) {
+                    var concept = splitCamel(i.replace("itcc-ci:", "").replace($('#catSelect').val(),""));
+                    var b = { 'indexLabel': concept, 'y': item["#text"] };
+                    console.log(b);
+                    chartData.push(b);
+                };
+                
+            });
+            chart1.options.data[0].dataPoints = chartData;
+            chart2.options.data[0].dataPoints = chartData;
+            chart1.render();
+            chart2.render();
+        });
+
+        // handle year change event
+        $('#yearSelect').change(function () {
+            var chart1 = $("#chartContainer1").CanvasJSChart();
+            var chart2 = $("#chartContainer2").CanvasJSChart();
+            // to do
+            chart1.render();
+            chart2.render();
+        });
+
+        $('#go').on('click', function () {
+            var chart1 = $("#chartContainer1").CanvasJSChart();
+            var chart2 = $("#chartContainer2").CanvasJSChart();
+            chart1.render();
+            chart2.render();
+        });
+
     });
 </script>
     </div>
