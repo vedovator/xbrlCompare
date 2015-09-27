@@ -185,13 +185,13 @@
             "@decimals": "0",
             "#text": "481668726"
         },
-        "itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo": {
+        "itcc-ci:ImmobilizzazioniFinanziarieCreditiVersoAltriEsigibiliOltreEsercizioSuccessivo": {
             "@contextRef": "i_31-12-2013",
             "@unitRef": "eur",
             "@decimals": "0",
             "#text": "500"
         },
-        "itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri": [
+        "itcc-ci:ImmobilizzazioniFinanziarieCreditiVersoAltriTotaleCreditiVersoAltri": [
             {
                 "@contextRef": "i_31-12-2013",
                 "@unitRef": "eur",

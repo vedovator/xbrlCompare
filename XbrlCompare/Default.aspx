@@ -48,45 +48,64 @@
         </div>
     </div>
     <div class="row" runat="server" id="secondrow">
-
- 
-
-    <p>Select type chart and category to visualize compared data</p>       
-    <select id="typeSelect" style="font-size:1.4em; margin: 10px;">
-        <option value ="bar">Barre</option>
-        <option value ="column">Colonne</option>
-        <option value ="pie">Torta</option>
-        <option value ="doughnut">Ciambella</option>
-    </select>
-    Anno <select id="yearSelect" style="font-size:1.4em; margin: 10px;"></select>
+   <p>Select category to visualize compared data</p>       
+    Bilancio in <span id="currency"></span> per l'anno <select id="yearSelect" style="font-size:1.4em; margin: 10px;"></select>
+    <div style="width:200px; margin: 10px;float:left;">
+        <div class="list-group">
+            <a href="#" title="" class="list-group-item active">STATO PATRIMONIALE</a>
+            <a href="#" title="Immobilizzazioni" class="list-group-item">Immobilizzazioni</a>
+            <a href="#" title="Rimanenze,Crediti,AttivitaFinanziarie,DisponibilitaLiquide" class="list-group-item">Attivo circolante</a>
+            <a href="#" title="Ratei,Risconti" class="list-group-item">Ratei e risconti attivi</a>
+            <a href="#" title="Conti" class="list-group-item">Conti d'ordine</a>
+            <a href="#" title="Conti" class="list-group-item">Patrimonio netto</a>
+            <a href="#" title="Conti" class="list-group-item">Fondo per rischi ed oneri</a>
+            <a href="#" title="Conti" class="list-group-item">Trattamento Fine Rapporto</a>
+            <a href="#" title="Conti" class="list-group-item">Debiti</a>
+            <a href="#" title="Conti" class="list-group-item">Ratei e risconti passivi</a>
+        </div>
+        <div class="list-group">
+            <a href="#" title="" class="list-group-item active">CONTO ECONOMICO</a>
+            <a href="#" title="" class="list-group-item">Valore della produzione</a>
+            <a href="#" title="" class="list-group-item">Costi della produzione</a>
+            <a href="#" title="" class="list-group-item">Proventi e oneri finanziari</a>
+            <a href="#" title="" class="list-group-item">Rettifiche di valore di attività finanziarie</a>
+            <a href="#" title="" class="list-group-item">Proventi e oneri straordinari</a>
+            <a href="#" title="" class="list-group-item">Imposte sul reddito dell'esercizio</a>
+        </div>
     Sezione <select id="catSelect" style="font-size:1.4em; margin: 10px;">
-    </select>
-        <br />
-    Bilancio in <span id="currency"></span>
+        <option value ="jhlkajsdhf">Select a value</option>
+    </select>    <br />
     <input type="button" id="go" value="  show data  " style="font-size:1.4em; margin: 10px;" />
-    <br />
-    
-    <br />
-    <div id="chartContainer1" style="height: 360px; width: 45%; margin: 10px;float:left;"></div>
-    <div id="chartContainer2" style="height: 360px; width: 45%; margin: 10px;float:right;"></div>
+</div>
+<div id="chartContainer1" style="height: 360px; width: 65%; margin: 10px;float:right;" ></div>
+<div id="chartContainer2" style="height: 360px; width: 65%; margin: 10px;float:right;"></div>
 
 <script type="text/javascript">
 
     $(function () {
 
-        var bilancio = { "?xml": { "@version": "1.0", "@encoding": "UTF-8" }, "xbrl": { "@xmlns": "http://www.xbrl.org/2003/instance", "@xmlns:link": "http://www.xbrl.org/2003/linkbase", "@xmlns:xlink": "http://www.w3.org/1999/xlink", "@xmlns:itcc-ci": "http://www.infocamere.it/itnn/fr/itcc/ci/2013-01-04", "@xmlns:itcc-ci-ese": "http://www.infocamere.it/itnn/fr/itcc/ci/ese/2013-01-04", "@xmlns:iso4217": "http://www.xbrl.org/2003/iso4217", "link:schemaRef": { "@xlink:type": "simple", "@xlink:arcrole": "http://www.w3.org/1999/xlink/properties/linkbase", "@xlink:href": "itcc-ci-ese-2013-01-04.xsd" }, "context": [{ "@id": "i_31-12-2012", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "instant": "2012-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }, { "@id": "d_31-12-2012", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "startDate": "2012-01-01", "endDate": "2012-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }, { "@id": "i_31-12-2013", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "instant": "2013-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }, { "@id": "d_31-12-2013", "entity": { "identifier": { "@scheme": "http://www.infocamere.it", "#text": "Careggi" } }, "period": { "startDate": "2013-01-01", "endDate": "2013-12-31" }, "scenario": { "itcc-ci-ese:scen": "Depositato" } }], "unit": { "@id": "eur", "measure": "iso4217:EUR" }, "itcc-ci:ImmobilizzazioniImmaterialiCostiImpiantoAmpliamento": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "5989" }, "itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "1195920" }, "itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "371224" }, "itcc-ci:ImmobilizzazioniImmaterialiAltre": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "15851342" }, "itcc-ci:TotaleImmobilizzazioniImmateriali": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "17424475" }, "itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "68534" }, "itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "20758038" }, "itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "304529837" }, "itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "325356409" }, "itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "31421494" }, "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "22278028" }, "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "7514557" }, "itcc-ci:ImmobilizzazioniMaterialiAttrezzatureAutomezzi": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "18426" }, "itcc-ci:ImmobilizzazioniMaterialiAltriBeni": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "486528" }, "itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "76954775" }, "itcc-ci:TotaleImmobilizzazioniMateriali": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "464030217" }, "itcc-ci:TotaleImmobilizzazioni": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "481668726" }, "itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "500" }, "itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri": [{ "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "500" }, { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "24144129" }], "itcc-ci:ImmobilizzazioniFinanziariePartecipazioni": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "213534" }, "#comment": [], "itcc-ci:RimanenzeBeniSanitari": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "21402053" }, "itcc-ci:RimanenzeBeniNonSanitari": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "940189" }, "itcc-ci:RimanenzeAccontiAcquistiBeniSanitari": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "379594" }, "itcc-ci:TotaleRimanenze": { "@contextRef": "i_31-12-2013", "@unitRef": "eur", "@decimals": "0", "#text": "22721837" } } };
+        var bilancio1 = <%= Session["json1"]  %>;
+        var bilancio2 = <%= Session["json2"]  %>;
 
         // do some cleaning and initialization
-        delete bilancio["?xml"];
-        delete bilancio.xbrl["link:schemaRef"];
-        delete bilancio.xbrl["@xmlns:link"];
-        delete bilancio.xbrl["@xmlns:xlink"];
-        delete bilancio.xbrl["@xmlns"];
-        delete bilancio.xbrl["@xmlns:itcc-ci"];
-        delete bilancio.xbrl["@xmlns:itcc-ci-ese"];
-        delete bilancio.xbrl["@xmlns:iso4217"];
+        delete bilancio1["?xml"];
+        delete bilancio1.xbrl["link:schemaRef"];
+        delete bilancio1.xbrl["@xmlns:link"];
+        delete bilancio1.xbrl["@xmlns:xlink"];
+        delete bilancio1.xbrl["@xmlns"];
+        delete bilancio1.xbrl["@xmlns:itcc-ci"];
+        delete bilancio1.xbrl["@xmlns:itcc-ci-ese"];
+        delete bilancio1.xbrl["@xmlns:iso4217"];
+        delete bilancio2["?xml"];
+        delete bilancio2.xbrl["link:schemaRef"];
+        delete bilancio2.xbrl["@xmlns:link"];
+        delete bilancio2.xbrl["@xmlns:xlink"];
+        delete bilancio2.xbrl["@xmlns"];
+        delete bilancio2.xbrl["@xmlns:itcc-ci"];
+        delete bilancio2.xbrl["@xmlns:itcc-ci-ese"];
+        delete bilancio2.xbrl["@xmlns:iso4217"];
         // get years from financial reports and bind them to select
-        var years = getYears(bilancio);
+        var years = getYears(bilancio1);
         $.each(years, function (i, item) {
             $('#yearSelect').append($('<option>', {
                 value: item,
@@ -95,7 +114,7 @@
         });
 
         // Get titles from financial reports and bind them to select
-        var titles = aggregateTitles(bilancio);
+        var titles = aggregateTitles(bilancio1);
         $.each(titles, function (i, item) {
             $('#catSelect').append($('<option>', {
                 value: item,
@@ -103,10 +122,10 @@
             }));
         });
 
-        delete bilancio.xbrl.context;
+        delete bilancio1.xbrl.context;
         // show current currency
-        $('#currency').text(bilancio.xbrl.unit.measure);
-        delete bilancio.xbrl.unit;
+        $('#currency').text(bilancio1.xbrl.unit.measure);
+        delete bilancio1.xbrl.unit;
 
         // set up chart #1
         $("#chartContainer1").CanvasJSChart({
@@ -148,7 +167,7 @@
 			}
             ]
         });
-        // handle chart type change event
+        /* handle chart type change event
         $('#typeSelect').change(function () {
             var chart1 = $("#chartContainer1").CanvasJSChart();
             var chart2 = $("#chartContainer2").CanvasJSChart();
@@ -156,27 +175,39 @@
             chart2.options.data[0].type = $('#typeSelect').val();
             chart1.render();
             chart2.render();
-        });
+        }); no more useful */
 
         // handle section change event
         $('#catSelect').change(function () {
             var chart1 = $("#chartContainer1").CanvasJSChart();
             var chart2 = $("#chartContainer2").CanvasJSChart();
             // bind chart data
-            var chartData = [];
-            jQuery.each(bilancio.xbrl, function (i, item) {
+            var chart1Data = [];
+            var chart2Data = [];
+            jQuery.each(bilancio1.xbrl, function (i, item) {
                 
                 var wordLength = $('#catSelect').val().length;
                 if ($('#catSelect').val() === i.replace("itcc-ci:", "").substring(0, wordLength)) {
                     var concept = splitCamel(i.replace("itcc-ci:", "").replace($('#catSelect').val(),""));
-                    var b = { 'indexLabel': concept, 'y': item["#text"] };
-                    console.log(b);
-                    chartData.push(b);
+                    if (concept.indexOf('Totale') < 0) {
+                        var b = { 'indexLabel': concept, 'y': item["#text"] };
+                        chart1Data.push(b);
+                    } else { console.log(b);  };
                 };
-                
             });
-            chart1.options.data[0].dataPoints = chartData;
-            chart2.options.data[0].dataPoints = chartData;
+            jQuery.each(bilancio2.xbrl, function (i, item) {
+                
+                var wordLength = $('#catSelect').val().length;
+                if ($('#catSelect').val() === i.replace("itcc-ci:", "").substring(0, wordLength)) {
+                    var concept = splitCamel(i.replace("itcc-ci:", "").replace($('#catSelect').val(),""));
+                    if (concept.indexOf('Totale') < 0) {
+                        var b = { 'indexLabel': concept, 'y': item["#text"] };
+                        chart2Data.push(b);
+                    } else { console.log(b);  };
+                };
+            });
+            chart1.options.data[0].dataPoints = chart1Data;
+            chart2.options.data[0].dataPoints = chart2Data;
             chart1.render();
             chart2.render();
         });

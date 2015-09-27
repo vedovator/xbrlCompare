@@ -67,8 +67,8 @@
 	<itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti contextRef="i_31-12-2013" unitRef="eur" decimals="0">76954775</itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti>
 	<itcc-ci:TotaleImmobilizzazioniMateriali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >464030217</itcc-ci:TotaleImmobilizzazioniMateriali>
 	<itcc-ci:TotaleImmobilizzazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >481668726</itcc-ci:TotaleImmobilizzazioni>
-	<itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >500</itcc-ci:CreditiVersoAltriEsigibiliOltreEsercizioSuccessivo>
-	<itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >500</itcc-ci:CreditiVersoAltriTotaleCreditiVersoAltri>
+	<itcc-ci:ImmobilizzazioniFinanziarieCreditiVersoAltriEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >500</itcc-ci:ImmobilizzazioniFinanziarieCreditiVersoAltriEsigibiliOltreEsercizioSuccessivo>
+	<itcc-ci:ImmobilizzazioniFinanziarieCreditiVersoAltriTotaleCreditiVersoAltri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >500</itcc-ci:ImmobilizzazioniFinanziarieCreditiVersoAltriTotaleCreditiVersoAltri>
 	<itcc-ci:ImmobilizzazioniFinanziariePartecipazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0">213534</itcc-ci:ImmobilizzazioniFinanziariePartecipazioni>
 	<!-- fine immobilizzazioni inizia attivo circolante -->
 	<itcc-ci:RimanenzeBeniSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >21402053</itcc-ci:RimanenzeBeniSanitari>
