@@ -13,7 +13,7 @@
             <h2>Caricamento</h2>
             <p>
                 Inserisci qui due file xbrl. <br />
-                (Puoi usare questi due esempi: <a href="Test/IstanzaCareggi2013">AOUCareggi 2013</a> - <a href="Test/IstanzaEmpoli2013">ASL11 2013</a>)
+                (Puoi usare questi due esempi: <a href="Test/IstanzaCareggi2013.xml">AOUCareggi 2013</a> - <a href="Test/IstanzaEmpoli2013.xml">ASL11 2013</a>)
             </p>
             <p>
                 <asp:FileUpload ID="FileUpload1" runat="server" />

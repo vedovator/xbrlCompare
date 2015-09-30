@@ -95,8 +95,7 @@
     <Content Include="scripts\xbrl.vedo.js" />
     <Content Include="Site.Master" />
     <Content Include="scripts\jquery-2.1.4.min.map" />
-    <Content Include="Test\IstanzaCareggi2013.xbrl" />
-    <Content Include="Test\IstanzaEmpoli2013.xbrl" />
+    <Content Include="Test\IstanzaCareggi2013.xml" />
     <Content Include="Test\Careggi.json" />
     <Content Include="Test\Asl11.json" />
     <None Include="Test\itcc-ci-2014-11-17.xsd">
@@ -128,6 +127,7 @@
     <Content Include="favicon.ico" />
     <Content Include="scripts\ai.0.15.0-build32981.js" />
     <Content Include="scripts\ai.0.15.0-build32981.min.js" />
+    <Content Include="Test\IstanzaEmpoli2013.xml" />
     <Content Include="Test\order002.xml" />
     <Content Include="Test\order001.xml" />
     <Content Include="Web.config" />
