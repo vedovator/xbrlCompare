@@ -48,37 +48,32 @@
         </div>
     </div>
     <div class="row" runat="server" id="secondrow">
-   <p>Select category to visualize compared data</p>       
+   <p>Seleziona la categoria per visualizzare la comparazione</p>       
     Bilancio in <span id="currency"></span> per l'anno <select id="yearSelect" style="font-size:1.4em; margin: 10px;"></select>
     <div style="width:200px; margin: 10px;float:left;">
         <div class="list-group">
-            <a href="#" title="" class="list-group-item active">STATO PATRIMONIALE</a>
-            <a href="#" title="Immobilizzazioni" class="list-group-item">Immobilizzazioni</a>
-            <a href="#" title="Rimanenze,Crediti,AttivitaFinanziarie,DisponibilitaLiquide" class="list-group-item">Attivo circolante</a>
-            <a href="#" title="AttivoRateiRisconti" class="list-group-item">Ratei e risconti attivi</a>
-            <a href="#" title="Conti" class="list-group-item">Conti d'ordine</a>
-            <a href="#" title="PatrimonioNetto" class="list-group-item">Patrimonio netto</a>
-            <a href="#" title="FondiRischiOneri" class="list-group-item">Fondo per rischi ed oneri</a>
-            <a href="#" title="TrattamentoFineRapporto" class="list-group-item">Trattamento Fine Rapporto</a>
-            <a href="#" title="Debiti" class="list-group-item">Debiti</a>
-            <a href="#" title="PassivoRateiRisconti" class="list-group-item">Ratei e risconti passivi</a>
+            <a href="#secondrow" title="sp" class="list-group-item active">STATO PATRIMONIALE</a>
+            <a href="#secondrow" title="Immobilizzazioni" class="list-group-item">Immobilizzazioni</a>
+            <a href="#secondrow" title="Rimanenze,Crediti,AttivitaFinanziarie,DisponibilitaLiquide" class="list-group-item">Attivo circolante</a>
+            <a href="#secondrow" title="AttivoRateiRisconti" class="list-group-item">Ratei e risconti attivi</a>
+            <a href="#secondrow" title="PatrimonioNetto" class="list-group-item">Patrimonio netto</a>
+            <a href="#secondrow" title="FondiRischiOneri" class="list-group-item">Fondo per rischi ed oneri</a>
+            <a href="#secondrow" title="TrattamentoFineRapporto" class="list-group-item">Trattamento Fine Rapporto</a>
+            <a href="#secondrow" title="Debiti" class="list-group-item">Debiti</a>
+            <a href="#secondrow" title="PassivoRateiRisconti" class="list-group-item">Ratei e risconti passivi</a>
         </div>
         <div class="list-group">
-            <a href="#" title="" class="list-group-item active">CONTO ECONOMICO</a>
-            <a href="#" title="ValoreProduzione" class="list-group-item">Valore della produzione</a>
-            <a href="#" title="CostiProduzione" class="list-group-item">Costi della produzione</a>
-            <a href="#" title="ProventiOneriFinanziari" class="list-group-item">Proventi e oneri finanziari</a>
-            <a href="#" title="" class="list-group-item">Rettifiche di valore di attività finanziarie</a>
-            <a href="#" title="ProventiOneriStraordinari" class="list-group-item">Proventi e oneri straordinari</a>
-            <a href="#" title="ImposteRedditoEsercizio" class="list-group-item">Imposte sul reddito dell'esercizio</a>
+            <a href="#secondrow" title="ce" class="list-group-item active">CONTO ECONOMICO</a>
+            <a href="#secondrow" title="ValoreProduzione" class="list-group-item">Valore della produzione</a>
+            <a href="#secondrow" title="CostiProduzione" class="list-group-item">Costi della produzione</a>
+            <a href="#secondrow" title="ProventiOneriFinanziari" class="list-group-item">Proventi e oneri finanziari</a>
+            <a href="#secondrow" title="RettificheValoreAttivita" class="list-group-item">Rettifiche di valore di attività finanziarie</a>
+            <a href="#secondrow" title="ProventiOneriStraordinari" class="list-group-item">Proventi e oneri straordinari</a>
+            <a href="#secondrow" title="ImposteRedditoEsercizio" class="list-group-item">Imposte sul reddito dell'esercizio</a>
         </div>
-    Sezione <select id="catSelect" style="font-size:1.4em; margin: 10px;">
-        <option value ="jhlkajsdhf">Select a value</option>
-    </select>    <br />
-    <input type="button" id="go" value="  show data  " style="font-size:1.4em; margin: 10px;" />
 </div>
-<div id="chartContainer1" style="height: 360px; width: 65%; margin: 10px;float:right;" ></div>
-<div id="chartContainer2" style="height: 360px; width: 65%; margin: 10px;float:right;"></div>
+<div id="chartContainer1" style="height: 380px; width: 65%; margin: 10px;float:right;" ></div>
+<div id="chartContainer2" style="height: 380px; width: 65%; margin: 10px;float:right;"></div>
 
 <script type="text/javascript">
 
@@ -113,27 +108,26 @@
             }));
         });
 
-        // Get titles from financial reports and bind them to select
-        var titles = aggregateTitles(bilancio1);
-        $.each(titles, function (i, item) {
-            $('#catSelect').append($('<option>', {
-                value: item,
-                text: item
-            }));
-        });
-
         delete bilancio1.xbrl.context;
         // show current currency
         $('#currency').text(bilancio1.xbrl.unit.measure);
         delete bilancio1.xbrl.unit;
 
+        CanvasJS.addCultureInfo("it",
+                {
+                    decimalSeparator: ",",
+                    digitGroupSeparator: ".",
+                    days: ["domenica", "lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato"],
+                });
+
         // set up chart #1
         $("#chartContainer1").CanvasJSChart({
             title: {
-                text: "AOU Careggi"
+                text: "1"
             },
             animationEnabled: true,
             axisY: { title: "Valore in euro", },
+            culture:  "it",
             data: [
 			{
 			    type: "doughnut",
@@ -150,10 +144,11 @@
         // set up chart #2
         $("#chartContainer2").CanvasJSChart({
             title: {
-                text: "ASL 11"
+                text: "2"
             },
             animationEnabled: true,
             axisY: { title: "Valore in euro", },
+            culture:  "it",
             data: [
 			{
 			    type: "doughnut",
@@ -167,63 +162,36 @@
 			}
             ]
         });
-        /* handle chart type change event
-        $('#typeSelect').change(function () {
-            var chart1 = $("#chartContainer1").CanvasJSChart();
-            var chart2 = $("#chartContainer2").CanvasJSChart();
-            chart1.options.data[0].type = $('#typeSelect').val();
-            chart2.options.data[0].type = $('#typeSelect').val();
-            chart1.render();
-            chart2.render();
-        }); no more useful */
+  
 
-        // handle section change event
-        $('#catSelect').change(function () {
+        // handle left menu selection
+        $('.list-group-item').click(function() {
+            $('.list-group-item').removeClass("active");
+            $(this).addClass( "active" );            
+            var sections = $(this).attr("title");
+            //console.log(sections);
+
             var chart1 = $("#chartContainer1").CanvasJSChart();
             var chart2 = $("#chartContainer2").CanvasJSChart();
             // bind chart data
-            var chart1Data = [];
-            var chart2Data = [];
-            jQuery.each(bilancio1.xbrl, function (i, item) {
-                
-                var wordLength = $('#catSelect').val().length;
-                if ($('#catSelect').val() === i.replace("itcc-ci:", "").substring(0, wordLength)) {
-                    var concept = splitCamel(i.replace("itcc-ci:", "").replace($('#catSelect').val(),""));
-                    if (concept.indexOf('Totale') < 0) {
-                        var b = { 'indexLabel': concept, 'y': item["#text"] };
-                        chart1Data.push(b);
-                    } else { console.log(b);  };
-                };
-            });
-            jQuery.each(bilancio2.xbrl, function (i, item) {
-                
-                var wordLength = $('#catSelect').val().length;
-                if ($('#catSelect').val() === i.replace("itcc-ci:", "").substring(0, wordLength)) {
-                    var concept = splitCamel(i.replace("itcc-ci:", "").replace($('#catSelect').val(),""));
-                    if (concept.indexOf('Totale') < 0) {
-                        var b = { 'indexLabel': concept, 'y': item["#text"] };
-                        chart2Data.push(b);
-                    } else { console.log(b);  };
-                };
-            });
+            var chart1Data = extractInfo(bilancio1.xbrl, sections);
+            var chart2Data = extractInfo(bilancio2.xbrl, sections);
             chart1.options.data[0].dataPoints = chart1Data;
             chart2.options.data[0].dataPoints = chart2Data;
+            chart1.options.title.text = bilancio1.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"];
+            chart2.options.title.text = bilancio2.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"];
             chart1.render();
             chart2.render();
+
         });
+
+        
 
         // handle year change event
         $('#yearSelect').change(function () {
             var chart1 = $("#chartContainer1").CanvasJSChart();
             var chart2 = $("#chartContainer2").CanvasJSChart();
             // to do
-            chart1.render();
-            chart2.render();
-        });
-
-        $('#go').on('click', function () {
-            var chart1 = $("#chartContainer1").CanvasJSChart();
-            var chart2 = $("#chartContainer2").CanvasJSChart();
             chart1.render();
             chart2.render();
         });

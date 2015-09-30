@@ -97,11 +97,11 @@ namespace Confronti
             // now convert in Json and show on span2
             string json = JsonConvert.SerializeXmlNode(doc);
             Session["json1"] = json;
-            Span2.InnerHtml += json;
+            //Span2.InnerHtml += json;
             json = JsonConvert.SerializeXmlNode(doc2);
             Session["json2"] = json;
-            Span2.InnerHtml += "<br /><br />";
-            Span2.InnerHtml += json;
+            Span2.InnerHtml += "Files convertiti in formato JSON<br />";
+            //Span2.InnerHtml += json;
         }
 
         protected void CompareButton_Click(object sender, EventArgs e)

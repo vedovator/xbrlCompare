@@ -58,7 +58,7 @@
 	<itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >68534</itcc-ci:ImmobilizzazioniMaterialiTerreniDisponibili>	
 	<itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >20758038</itcc-ci:ImmobilizzazioniMaterialiFabbricatiDisponibili>	
 	<itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >304529837</itcc-ci:ImmobilizzazioniMaterialiFabbricatiIndisponibili>
-	<itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati contextRef="i_31-12-2013" unitRef="eur" decimals="0">68534+325287875</itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati>
+	<itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati contextRef="i_31-12-2013" unitRef="eur" decimals="0">325356409</itcc-ci:ImmobilizzazioniMaterialiTerreniFabbricati>
 	<itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario contextRef="i_31-12-2013" unitRef="eur" decimals="0" >31421494</itcc-ci:ImmobilizzazioniMaterialiImpiantiMacchinario>
 	<itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche contextRef="i_31-12-2013" unitRef="eur" decimals="0" >22278028</itcc-ci:ImmobilizzazioniMaterialiAttrezzatureSanitarieScientifiche>
 	<itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >7514557</itcc-ci:ImmobilizzazioniMaterialiAttrezzatureMobiliArredi>
@@ -93,7 +93,6 @@
 	<!-- disponibilita liquide  -->
 	<itcc-ci:DisponibilitaLiquideDanaroValoriCassa contextRef="i_31-12-2013" unitRef="eur" decimals="0" >6130</itcc-ci:DisponibilitaLiquideDanaroValoriCassa>
 	<itcc-ci:DisponibilitaLiquideIstitutoTesoriere contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8475328</itcc-ci:DisponibilitaLiquideIstitutoTesoriere>
-	<itcc-ci:DisponibilitaLiquideTesoreriaUnica contextRef="i_31-12-2013" unitRef="eur" decimals="0" ></itcc-ci:DisponibilitaLiquideTesoreriaUnica>
 	<itcc-ci:DisponibilitaLiquideContoCorrentePostale contextRef="i_31-12-2013" unitRef="eur" decimals="0" >92456</itcc-ci:DisponibilitaLiquideContoCorrentePostale>
 	<itcc-ci:TotaleDisponibilitaLiquide contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8573915</itcc-ci:TotaleDisponibilitaLiquide>
 	<itcc-ci:TotaleAttivoCircolante contextRef="i_31-12-2013" unitRef="eur" decimals="0" >275983785</itcc-ci:TotaleAttivoCircolante>
@@ -214,10 +213,6 @@
 	<itcc-ci:ProventiOneriFinanziariInteressiAttiviAltriProventiFinanziari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >337</itcc-ci:ProventiOneriFinanziariInteressiAttiviAltriProventiFinanziari>
 	<itcc-ci:ProventiOneriFinanziariInteressiPassiviAltriOneriFinanziari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2671030</itcc-ci:ProventiOneriFinanziariInteressiPassiviAltriOneriFinanziari>
 	<itcc-ci:TotaleProventiOneriFinanziari contextRef="d_31-12-2013" unitRef="eur" decimals="0" >-2670693</itcc-ci:TotaleProventiOneriFinanziari>
-	<itcc-ci:ProventiOneriStraordinariProventiAltri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >124</itcc-ci:ProventiOneriStraordinariProventiAltri>
-	<itcc-ci:ProventiOneriStraordinariProventiTotaleProventi contextRef="d_31-12-2013" unitRef="eur" decimals="0" >124</itcc-ci:ProventiOneriStraordinariProventiTotaleProventi>
-	<itcc-ci:ProventiOneriStraordinariOneriAltri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >847</itcc-ci:ProventiOneriStraordinariOneriAltri>
-	<itcc-ci:ProventiOneriStraordinariOneriTotaleOneri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >847</itcc-ci:ProventiOneriStraordinariOneriTotaleOneri>	
 	<itcc-ci:ProventiOneriStraordinariProventiAltri contextRef="d_31-12-2013" unitRef="eur" decimals="0" >7124925</itcc-ci:ProventiOneriStraordinariProventiAltri>
 	<itcc-ci:ProventiOneriStraordinariProventiTotaleProventi contextRef="d_31-12-2013" unitRef="eur" decimals="0" >7124925</itcc-ci:ProventiOneriStraordinariProventiTotaleProventi>
 	<itcc-ci:ProventiOneriStraordinariOneriMinusvalenzeAlienazioniCuiEffettiContabiliNonSonoIscrivibiliN14 contextRef="d_31-12-2013" unitRef="eur" decimals="0" >20980</itcc-ci:ProventiOneriStraordinariOneriMinusvalenzeAlienazioniCuiEffettiContabiliNonSonoIscrivibiliN14>
