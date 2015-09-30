@@ -7,39 +7,37 @@
         <p class="lead">Questa applicazione sperimentale consente di caricare due bilanci in formato XBRL di cui si vuole effettuare il confronto. 
         Dopo aver validato i bilanci e' possibile poi scegliere quali elementi confrontare e ottenerne una visualizzazione in formato tabellare o grafico.
         </p>
-        
-
     </div>
-
     <div class="row" runat="server" id="mainrow">
         <div class="col-md-4">
-            <h2>Loading</h2>
+            <h2>Caricamento</h2>
             <p>
-                Insert here two distinct Xbrl instance files.
+                Inserisci qui due file xbrl. <br />
+                (Puoi usare questi due esempi: <a href="Test/IstanzaCareggi2013">AOUCareggi 2013</a> - <a href="Test/IstanzaEmpoli2013">ASL11 2013</a>)
             </p>
             <p>
                 <asp:FileUpload ID="FileUpload1" runat="server" />
             <br />
             <asp:FileUpload ID="FileUpload2" runat="server" />
                 <br />
-            <asp:LinkButton ID="LoadButton" runat="server" CssClass="btn btn-default" OnClick="LoadButton_Click">Load</asp:LinkButton>
+            <asp:LinkButton ID="LoadButton" runat="server" CssClass="btn btn-default" OnClick="LoadButton_Click">Carica</asp:LinkButton>
             </p>
             <div runat="server" id="Span1"></div>
         </div>
         <div class="col-md-4">
-            <h2>Validation</h2>
+            <h2>Validazione</h2>
             <p>
-                Verify that current uploaded files are valid.
+                Verifica che i files siano validi.
             </p>
             <p>
-                <asp:LinkButton ID="ValidateButton" runat="server" CssClass="btn btn-default" OnClick="ValidateButton_Click" >Validate</asp:LinkButton>                
+                <asp:LinkButton ID="ValidateButton" runat="server" CssClass="btn btn-default" OnClick="ValidateButton_Click" >Valida</asp:LinkButton>                
             </p>
             <div runat="server" id="Span2"></div>
         </div>
         <div class="col-md-4">
-            <h2>Compare</h2>
+            <h2>Confronta</h2>
             <p>
-                You can easily compare two financial statements from different companies (relating the same period) navigating through financial elements.
+                Puoi confrontare due bilanci di aziende differenti navigando le sezioni di bilancio.
             </p>
             <p>
                 <asp:LinkButton ID="CompareButton" runat="server" CssClass="btn btn-default" OnClick="CompareButton_Click" >Confronta</asp:LinkButton>                
