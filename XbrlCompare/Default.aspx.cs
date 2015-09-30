@@ -25,7 +25,6 @@ namespace Confronti
 
         protected void LoadButton_Click(object sender, EventArgs e)
         {
-          string filepath = Server.MapPath("\\Upload");
           HttpFileCollection uploadedFiles = Request.Files;
           Span1.InnerHtml = string.Empty;
           
@@ -35,25 +34,28 @@ namespace Confronti
               try {
                   // process file #1
                   // check if it has xml extension
-                  if ((userPostedFile1.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xbrl") && (userPostedFile2.ContentLength > 0) && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xbrl"))
+                  if ((userPostedFile1.ContentLength > 0) && (userPostedFile2.ContentLength > 0) )
                   {
-                      MyString = new StreamReader(userPostedFile1.InputStream).ReadToEnd();
-                      Session["xmlfile1"] = MyString;
-                      Span1.InnerHtml += "<u>File #1</u><br>";
-                      Span1.InnerHtml += "File Content Type: " + userPostedFile1.ContentType + "<br>";
-                      Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
-                      Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
+                      if ((System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xml") && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xml"))
+                      {
+                          MyString = new StreamReader(userPostedFile1.InputStream).ReadToEnd();
+                          Session["xmlfile1"] = MyString;
+                          Span1.InnerHtml += "<u>File #1</u><br>";
+                          Span1.InnerHtml += "File Content Type: " + userPostedFile1.ContentType + "<br>";
+                          Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
+                          Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
 
-                      // process file #2
-                      MyString = new StreamReader(userPostedFile2.InputStream).ReadToEnd();
-                      Session["xmlfile2"] = MyString;
-                      Span1.InnerHtml += "<u>File #2</u><br>";
-                      Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
-                      Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
-                      Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
-
+                          // process file #2
+                          MyString = new StreamReader(userPostedFile2.InputStream).ReadToEnd();
+                          Session["xmlfile2"] = MyString;
+                          Span1.InnerHtml += "<u>File #2</u><br>";
+                          Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
+                          Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
+                          Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
+                      }
+                      else Span1.InnerHtml = "Errore: il file non ha estenzione .xml";
                   }
-                  else Span1.InnerHtml = "Error: minimum is two files or file is not in .xbrl extension";
+                  else Span1.InnerHtml = "Errore: sono richiesti almeno due files";
                   
 
               } catch(Exception Ex) {
