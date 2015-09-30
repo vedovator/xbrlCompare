@@ -55,22 +55,22 @@
             <a href="#" title="" class="list-group-item active">STATO PATRIMONIALE</a>
             <a href="#" title="Immobilizzazioni" class="list-group-item">Immobilizzazioni</a>
             <a href="#" title="Rimanenze,Crediti,AttivitaFinanziarie,DisponibilitaLiquide" class="list-group-item">Attivo circolante</a>
-            <a href="#" title="Ratei,Risconti" class="list-group-item">Ratei e risconti attivi</a>
+            <a href="#" title="AttivoRateiRisconti" class="list-group-item">Ratei e risconti attivi</a>
             <a href="#" title="Conti" class="list-group-item">Conti d'ordine</a>
-            <a href="#" title="Conti" class="list-group-item">Patrimonio netto</a>
-            <a href="#" title="Conti" class="list-group-item">Fondo per rischi ed oneri</a>
-            <a href="#" title="Conti" class="list-group-item">Trattamento Fine Rapporto</a>
-            <a href="#" title="Conti" class="list-group-item">Debiti</a>
-            <a href="#" title="Conti" class="list-group-item">Ratei e risconti passivi</a>
+            <a href="#" title="PatrimonioNetto" class="list-group-item">Patrimonio netto</a>
+            <a href="#" title="FondiRischiOneri" class="list-group-item">Fondo per rischi ed oneri</a>
+            <a href="#" title="TrattamentoFineRapporto" class="list-group-item">Trattamento Fine Rapporto</a>
+            <a href="#" title="Debiti" class="list-group-item">Debiti</a>
+            <a href="#" title="PassivoRateiRisconti" class="list-group-item">Ratei e risconti passivi</a>
         </div>
         <div class="list-group">
             <a href="#" title="" class="list-group-item active">CONTO ECONOMICO</a>
-            <a href="#" title="" class="list-group-item">Valore della produzione</a>
-            <a href="#" title="" class="list-group-item">Costi della produzione</a>
-            <a href="#" title="" class="list-group-item">Proventi e oneri finanziari</a>
+            <a href="#" title="ValoreProduzione" class="list-group-item">Valore della produzione</a>
+            <a href="#" title="CostiProduzione" class="list-group-item">Costi della produzione</a>
+            <a href="#" title="ProventiOneriFinanziari" class="list-group-item">Proventi e oneri finanziari</a>
             <a href="#" title="" class="list-group-item">Rettifiche di valore di attività finanziarie</a>
-            <a href="#" title="" class="list-group-item">Proventi e oneri straordinari</a>
-            <a href="#" title="" class="list-group-item">Imposte sul reddito dell'esercizio</a>
+            <a href="#" title="ProventiOneriStraordinari" class="list-group-item">Proventi e oneri straordinari</a>
+            <a href="#" title="ImposteRedditoEsercizio" class="list-group-item">Imposte sul reddito dell'esercizio</a>
         </div>
     Sezione <select id="catSelect" style="font-size:1.4em; margin: 10px;">
         <option value ="jhlkajsdhf">Select a value</option>
