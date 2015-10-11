@@ -110,8 +110,6 @@ namespace Confronti
         {
             mainrow.Visible = false;
             secondrow.Visible = true;
-            //To do legare i file trasmessi al codice del pivottable
-
         }
 
 
