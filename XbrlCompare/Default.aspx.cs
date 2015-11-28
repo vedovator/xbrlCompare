@@ -14,6 +14,7 @@ namespace Confronti
     public partial class _Default : Page
     {
         protected string MyString;
+        bool anyerror = false;
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,17 +71,20 @@ namespace Confronti
         {
             if (e.Severity == XmlSeverityType.Warning)
             {
-                Span2.InnerHtml +="WARNING: " + e.Message;
+                Span2.InnerHtml += "WARNING: " + e.Message.Substring(0,300) + "[...]<br />";
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
-                Span2.InnerHtml += "ERROR: " + e.Message;
+                Span2.InnerHtml += "ERRORE: " + e.Message.Substring(0, 300) + "[...]<br />";
+                anyerror = true;
             }
-            else Span2.InnerHtml += "UNH: " + e.Message;
+            else Span2.InnerHtml += "UNH: " + e.Message.Substring(0, 300) + "[...]<br />";
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
         {
+
+            
             string xsdfilepath = Server.MapPath("\\Test\\itvedo-ci-ese-2015-05-22.xsd");
             // Create the XmlSchemaSet class.
             XmlSchemaSet sc = new XmlSchemaSet();
@@ -95,6 +99,7 @@ namespace Confronti
             {
                 doc.LoadXml(Session["xmlfile1"].ToString());
                 doc.Validate(veh);
+                
                 XmlDocument doc2 = new XmlDocument();
                 doc2.Schemas = sc;
                 doc2.LoadXml(Session["xmlfile2"].ToString());
@@ -105,7 +110,7 @@ namespace Confronti
                 Session["json1"] = json;
                 json = JsonConvert.SerializeXmlNode(doc2);
                 Session["json2"] = json;
-                Span2.InnerHtml += "Files convertiti in formato JSON<br />";
+                
             }
             catch (NullReferenceException)
             {
@@ -116,7 +121,7 @@ namespace Confronti
                 Span2.InnerHtml = "Errore: <br>" + Ex.Message;
             }
             finally {
-                Span2.InnerHtml += "I file trasmessi sono validi.<br />";
+                if (!anyerror) Span2.InnerHtml += "I file trasmessi sono validi.<br />";
             }
         }
 
