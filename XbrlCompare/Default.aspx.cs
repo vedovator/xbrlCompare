@@ -71,14 +71,14 @@ namespace Confronti
         {
             if (e.Severity == XmlSeverityType.Warning)
             {
-                Span2.InnerHtml += "WARNING: " + e.Message.Substring(0,300) + "[...]<br />";
+                Span2.InnerHtml += "WARNING: " + e.Message.Substring(0,600) + "[...]<br />";
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
-                Span2.InnerHtml += "ERRORE: " + e.Message.Substring(0, 300) + "[...]<br />";
+                Span2.InnerHtml += "ERRORE: " + e.Message.Substring(0, 600) + "[...]<br />";
                 anyerror = true;
             }
-            else Span2.InnerHtml += "UNH: " + e.Message.Substring(0, 300) + "[...]<br />";
+            else Span2.InnerHtml += "UNH: " + e.Message.Substring(0, 600) + "[...]<br />";
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace Confronti
             // Create the XmlSchemaSet class.
             XmlSchemaSet sc = new XmlSchemaSet();
             // Add the schema to the collection
-            sc.Add("http://www.infocamere.it/itnn/fr/itcc/ci/ese/2014-11-17", xsdfilepath);
+            sc.Add("http://www.infocamere.it/itnn/fr/itvedo/ci/ese/2015-05-22", xsdfilepath);
             
             ValidationEventHandler veh = new ValidationEventHandler(xbrlValidationEventHandler);
             XmlDocument doc = new XmlDocument();
@@ -115,13 +115,16 @@ namespace Confronti
             catch (NullReferenceException)
             {
                 Span2.InnerHtml = "Errore: Prima di validare il file è necessario effettuare l'upload. <br />&lt;--";
+                anyerror = true;
             }
             catch (Exception Ex)
             {
                 Span2.InnerHtml = "Errore: <br>" + Ex.Message;
+                anyerror = true;
             }
             finally {
                 if (!anyerror) Span2.InnerHtml += "I file trasmessi sono validi.<br />";
+
             }
         }
 
