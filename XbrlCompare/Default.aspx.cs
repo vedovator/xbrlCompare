@@ -55,13 +55,13 @@ namespace Confronti
                           Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
                           Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
                       }
-                      else Span1.InnerHtml = "Errore: il file non ha estensione .xml";
+                      else Span1.InnerHtml = "Errore: il file non ha estensione .xml o .xbrl";
                   }
                   else Span1.InnerHtml = "Errore: sono richiesti almeno due files";
                   
 
               } catch(Exception Ex) {
-                  Span1.InnerHtml = "Error: <br>" + Ex.Message;
+                  Span1.InnerHtml = "Errore: <br>" + Ex.Message;
               }
           
         }
@@ -70,13 +70,13 @@ namespace Confronti
         {
             if (e.Severity == XmlSeverityType.Warning)
             {
-                Span2.InnerHtml ="WARNING: " + e.Message;
+                Span2.InnerHtml +="WARNING: " + e.Message;
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
-                Span2.InnerHtml = "ERROR: " + e.Message;
+                Span2.InnerHtml += "ERROR: " + e.Message;
             }
-            else Span2.InnerHtml = "UNH: " + e.Message;
+            else Span2.InnerHtml += "UNH: " + e.Message;
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
@@ -90,22 +90,34 @@ namespace Confronti
             ValidationEventHandler veh = new ValidationEventHandler(xbrlValidationEventHandler);
             XmlDocument doc = new XmlDocument();
             doc.Schemas = sc;
-            doc.LoadXml(Session["xmlfile1"].ToString());
-            doc.Validate(veh);
-            XmlDocument doc2 = new XmlDocument();
-            doc2.Schemas = sc;
-            doc2.LoadXml(Session["xmlfile2"].ToString());
-            doc2.Validate(veh);
-            Span2.InnerHtml = "I file trasmessi sono validi.<br />";
-            
-            // now convert in Json and show on span2
-            string json = JsonConvert.SerializeXmlNode(doc);
-            Session["json1"] = json;
-            //Span2.InnerHtml += json;
-            json = JsonConvert.SerializeXmlNode(doc2);
-            Session["json2"] = json;
-            Span2.InnerHtml += "Files convertiti in formato JSON<br />";
-            //Span2.InnerHtml += json;
+            Span2.InnerHtml = "";
+            try
+            {
+                doc.LoadXml(Session["xmlfile1"].ToString());
+                doc.Validate(veh);
+                XmlDocument doc2 = new XmlDocument();
+                doc2.Schemas = sc;
+                doc2.LoadXml(Session["xmlfile2"].ToString());
+                doc2.Validate(veh);
+
+                // now convert in Json and show on span2
+                string json = JsonConvert.SerializeXmlNode(doc);
+                Session["json1"] = json;
+                json = JsonConvert.SerializeXmlNode(doc2);
+                Session["json2"] = json;
+                Span2.InnerHtml += "Files convertiti in formato JSON<br />";
+            }
+            catch (NullReferenceException)
+            {
+                Span2.InnerHtml = "Errore: Prima di validare il file è necessario effettuare l'upload. <br />&lt;--";
+            }
+            catch (Exception Ex)
+            {
+                Span2.InnerHtml = "Errore: <br>" + Ex.Message;
+            }
+            finally {
+                Span2.InnerHtml += "I file trasmessi sono validi.<br />";
+            }
         }
 
         protected void CompareButton_Click(object sender, EventArgs e)
