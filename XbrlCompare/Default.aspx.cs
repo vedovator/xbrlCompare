@@ -36,7 +36,9 @@ namespace Confronti
                   // check if it has xml extension
                   if ((userPostedFile1.ContentLength > 0) && (userPostedFile2.ContentLength > 0) )
                   {
-                      if ((System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower() == ".xml") && (System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower() == ".xml"))
+                      string file1ext = System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower();
+                      string file2ext = System.IO.Path.GetExtension(userPostedFile2.FileName).ToLower();
+                      if ((file1ext == ".xml") && (file2ext == ".xml") || (file1ext == ".xbrl") && (file2ext == ".xbrl"))
                       {
                           MyString = new StreamReader(userPostedFile1.InputStream).ReadToEnd();
                           Session["xmlfile1"] = MyString;
@@ -53,7 +55,7 @@ namespace Confronti
                           Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
                           Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
                       }
-                      else Span1.InnerHtml = "Errore: il file non ha estenzione .xml";
+                      else Span1.InnerHtml = "Errore: il file non ha estensione .xml";
                   }
                   else Span1.InnerHtml = "Errore: sono richiesti almeno due files";
                   
