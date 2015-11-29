@@ -44,7 +44,7 @@ function extractInfo(bilancio, sections) {
                 if (concept.indexOf('Totale') < 0) {
                     var b = { 'indexLabel': concept, 'y': item["#text"] };
                     arrayData.push(b);
-                    console.log(b);
+                    //console.log(b);
                 };
             };
         }

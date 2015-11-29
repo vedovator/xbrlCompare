@@ -75,13 +75,19 @@ namespace Confronti
             if (e.Severity == XmlSeverityType.Warning)
             {
                 Span2.InnerHtml += "WARNING: " + myMessage + "<br />";
+                Span2.Attributes["class"] = "alert alert-warning";
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
                 Span2.InnerHtml += "ERRORE: " + myMessage + "<br />";
+                Span2.Attributes["class"] = "alert alert-danger";
                 anyerror = true;
             }
-            else Span2.InnerHtml += "UNH: " + myMessage + "<br />";
+            else
+            {
+                Span2.InnerHtml += "UNH: " + myMessage + "<br />";
+                Span2.Attributes["class"] = "alert alert-danger";
+            }
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
@@ -98,6 +104,7 @@ namespace Confronti
             XmlDocument doc = new XmlDocument();
             doc.Schemas = sc;
             Span2.InnerHtml = "";
+            Span2.Attributes["class"] = "alert";
             try
             {
                 doc.LoadXml(Session["xmlfile1"].ToString());
@@ -118,15 +125,21 @@ namespace Confronti
             catch (NullReferenceException)
             {
                 Span2.InnerHtml = "Errore: Prima di validare il file è necessario effettuare l'upload. <br />&lt;--";
+                Span2.Attributes["class"] = "alert alert-danger";
                 anyerror = true;
             }
             catch (Exception Ex)
             {
                 Span2.InnerHtml = "Errore: <br>" + Ex.Message;
+                Span2.Attributes["class"] = "alert alert-danger";
                 anyerror = true;
             }
             finally {
-                if (!anyerror) Span2.InnerHtml += "I file trasmessi sono validi.<br />";
+                if (!anyerror)
+                {
+                    Span2.InnerHtml += "I file trasmessi sono validi.<br />";
+                    Span2.Attributes["class"] = "alert alert-success";
+                }
 
             }
         }

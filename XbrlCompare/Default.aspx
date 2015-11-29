@@ -32,7 +32,7 @@
             <p>
                 <asp:LinkButton ID="ValidateButton" runat="server" CssClass="btn btn-default" OnClick="ValidateButton_Click" >Valida</asp:LinkButton>                
             </p>
-            <div runat="server" id="Span2" enableviewstate="false"></div>
+            <div runat="server" id="Span2" class="alert" enableviewstate="false"></div>
         </div>
         <div class="col-md-4">
             <h2>Confronta</h2>
