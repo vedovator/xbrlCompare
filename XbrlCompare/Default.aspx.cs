@@ -69,16 +69,18 @@ namespace Confronti
 
          void xbrlValidationEventHandler(object sender, ValidationEventArgs e)
         {
+            string myMessage = e.Message;
+            if (myMessage.length>500) myMessage=myMessage.Substring(0,500) + " [...]";
             if (e.Severity == XmlSeverityType.Warning)
             {
-                Span2.InnerHtml += "WARNING: " + e.Message.Substring(0,600) + "[...]<br />";
+                Span2.InnerHtml += "WARNING: " + myMessage + "<br />";
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
-                Span2.InnerHtml += "ERRORE: " + e.Message.Substring(0, 600) + "[...]<br />";
+                Span2.InnerHtml += "ERRORE: " + myMessage + "<br />";
                 anyerror = true;
             }
-            else Span2.InnerHtml += "UNH: " + e.Message.Substring(0, 600) + "[...]<br />";
+            else Span2.InnerHtml += "UNH: " + myMessage + "<br />";
         }
 
         protected void ValidateButton_Click(object sender, EventArgs e)
