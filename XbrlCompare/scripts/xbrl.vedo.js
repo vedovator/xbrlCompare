@@ -23,7 +23,7 @@ function extractInfo(bilancio, sections) {
         if (sections === 'sp') {
             var aggregatedSections = ['itcc-ci:TotaleImmobilizzazioniMateriali', 'itcc-ci:TotaleImmobilizzazioniImmateriali', 'itcc-ci:TotaleImmobilizzazioniFinanziarie', 'itcc-ci:TotaleRimanenze', 'itcc-ci:TotaleCrediti', 'itcc-ci:TotaleDisponibilitaLiquide'];
             if ($.inArray(i, aggregatedSections) > -1) {
-                var concept = splitCamel(i.replace("itcc-ci:", "")) + ' {y}';
+                var concept = splitCamel(i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", "")) + ' {y}';
                 var b = { 'indexLabel': concept, 'y': item["#text"] };
                 arrayData.push(b);
             }
@@ -31,7 +31,7 @@ function extractInfo(bilancio, sections) {
         if (sections === 'ce') {
             var aggregatedSections = ['itcc-ci:TotaleValoreProduzione', 'itcc-ci:TotaleCostiProduzione', 'itcc-ci:TotalePartiteStraordinarie', 'itcc-ci:ImposteRedditoEsercizioTotaleImposteRedditoEsercizio'];
             if ($.inArray(i, aggregatedSections) > -1) {
-                var concept = splitCamel(i.replace("itcc-ci:", "")) + ' {y}';
+                var concept = splitCamel(i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", "")) + ' {y}';
                 var b = { 'indexLabel': concept, 'y': item["#text"] };
                 arrayData.push(b);
             }
@@ -39,8 +39,8 @@ function extractInfo(bilancio, sections) {
         // show detail sections
 
         for (j = 0; j < arrSections.length; j++) {
-            if (arrSections[j] === i.replace("itcc-ci:", "").substring(0, arrSections[j].length)) {
-                var concept = splitCamel(i.replace("itcc-ci:", "")) + ' {y}';
+            if (arrSections[j] === i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", "").substring(0, arrSections[j].length)) {
+                var concept = splitCamel(i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", "")) + ' {y}';
                 if (concept.indexOf('Totale') < 0) {
                     var b = { 'indexLabel': concept, 'y': item["#text"] };
                     arrayData.push(b);
