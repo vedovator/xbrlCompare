@@ -235,5 +235,5 @@
 	<element id="itcc-ci_ImposteRedditoEsercizioAccantonamentoFondoImposte" name="ImposteRedditoEsercizioAccantonamentoFondoImposte" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" abstract="false"/>
 	<element id="itcc-ci_ImposteRedditoEsercizioTotaleImposteRedditoEsercizio" name="ImposteRedditoEsercizioTotaleImposteRedditoEsercizio" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" abstract="false"/>
 	<!-- fine conto economico inizio anagrafica -->
-	<element id="itcc-ci_DatiAnagraficiRegioneProvinciaAutonoma" name="DatiAnagraficiRegioneProvinciaAutonoma" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" abstract="true"/>
+	<element id="itcc-ci_DatiAnagraficiRegioneProvinciaAutonoma" name="DatiAnagraficiRegioneProvinciaAutonoma" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" abstract="false"/>
 </schema>
