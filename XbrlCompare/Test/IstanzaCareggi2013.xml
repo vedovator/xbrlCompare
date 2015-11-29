@@ -77,7 +77,6 @@
 	<itcc-ci:TotaleRimanenze contextRef="i_31-12-2013" unitRef="eur" decimals="0">22721837</itcc-ci:TotaleRimanenze>
 	<!-- Crediti -->	
 	<itvedo-ci-ese:CreditiVersoStatoEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >6854946</itvedo-ci-ese:CreditiVersoStatoEsigibiliEntroEsercizioSuccessivo>
-	<!-- <itvedo-ci-ese:CreditiVersoStatoEsigibiliOltreEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" ></itvedo-ci-ese:CreditiVersoStatoEsigibiliOltreEsercizioSuccessivo> -->
 	<itvedo-ci-ese:CreditiVersoStatoTotaleCreditiVersoStato contextRef="i_31-12-2013" unitRef="eur" decimals="0" >6854945</itvedo-ci-ese:CreditiVersoStatoTotaleCreditiVersoStato>	
 	<itvedo-ci-ese:CreditiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >201598011</itvedo-ci-ese:CreditiVersoRegioneProvinciaAutonomaEsigibiliEntroEsercizioSuccessivo>
 	<itvedo-ci-ese:CreditiVersoRegioneProvinciaAutonomaTotaleCreditiVersoRegioneProvinciaAutonoma contextRef="i_31-12-2013" unitRef="eur" decimals="0" >201598011</itvedo-ci-ese:CreditiVersoRegioneProvinciaAutonomaTotaleCreditiVersoRegioneProvinciaAutonoma>

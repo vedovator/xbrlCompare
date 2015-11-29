@@ -74,9 +74,9 @@
 	<element id="itcc-ci_AttivoRateiRiscontiRateiAttivi" name="AttivoRateiRiscontiRateiAttivi" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
 	<element id="itcc-ci_AttivoRateiRiscontiRiscontiAttivi" name="AttivoRateiRiscontiRiscontiAttivi" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
 	<!-- fine attivo iniziano conti ordine -->
-	<element id="itcc-ci_CanoniLeasingDaPagare" name="CanoniLeasingDaPagare" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
-	<element id="itcc-ci_DepositiCauzionali" name="DepositiCauzionali" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
-	<element id="itcc-ci_BeniInComodato" name="BeniInComodato" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
+	<element id="itcc-ci_CanoniLeasingDaPagare" name="CanoniLeasingDaPagare" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
+	<element id="itcc-ci_DepositiCauzionali" name="DepositiCauzionali" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
+	<element id="itcc-ci_BeniInComodato" name="BeniInComodato" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" abstract="false"/>
 	<!-- fine conti ordine inizia passivo -->
 	<element id="itcc-ci_PatrimonioNettoFondoDotazione" name="PatrimonioNettoFondoDotazione" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" abstract="false"/>
 	<element id="itcc-ci_PatrimonioNettoFinanziamentiPerInvestimenti" name="PatrimonioNettoFinanziamentiPerInvestimenti" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" abstract="true"/>
@@ -94,7 +94,7 @@
 	<element id="itcc-ci_FondiRischiOneriDaDistribuire" name="FondiRischiOneriDaDistribuire" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" abstract="false"/>
 	<element id="itcc-ci_FondiRischiOneriQuotaInutilizzataContributiVincolati" name="FondiRischiOneriQuotaInutilizzataContributiVincolati" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" abstract="false"/>
 	<!-- TFR -->
-	<element id="itcc-ci_TrattamentoFineRapporto" name="TrattamentoFineRapporto" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" abstract="true"/>
+	<element id="itcc-ci_TrattamentoFineRapporto" name="TrattamentoFineRapporto" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" abstract="false"/>
 	<element id="itcc-ci_TrattamentoFineRapportoPremiOperosita" name="TrattamentoFineRapportoPremiOperosita" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" abstract="false"/>  
 	<element id="itcc-ci_TotaleTrattamentoFineRapporto" name="TotaleTrattamentoFineRapporto" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" abstract="false"/>
 	<!-- Debiti -->

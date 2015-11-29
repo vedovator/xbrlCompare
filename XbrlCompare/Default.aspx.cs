@@ -34,7 +34,7 @@ namespace Confronti
 
               try {
                   // process file #1
-                  // check if it has xml extension
+                  // check if it has xml or xbrl extension
                   if ((userPostedFile1.ContentLength > 0) && (userPostedFile2.ContentLength > 0) )
                   {
                       string file1ext = System.IO.Path.GetExtension(userPostedFile1.FileName).ToLower();
@@ -45,7 +45,7 @@ namespace Confronti
                           Session["xmlfile1"] = MyString;
                           Span1.InnerHtml += "<u>File #1</u><br>";
                           Span1.InnerHtml += "File Content Type: " + userPostedFile1.ContentType + "<br>";
-                          Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
+                          Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + " bytes<br>";
                           Span1.InnerHtml += "File Name: " + userPostedFile1.FileName + "<br>";
 
                           // process file #2
@@ -53,7 +53,7 @@ namespace Confronti
                           Session["xmlfile2"] = MyString;
                           Span1.InnerHtml += "<u>File #2</u><br>";
                           Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
-                          Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + "kb<br>";
+                          Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + " bytes<br>";
                           Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
                       }
                       else Span1.InnerHtml = "Errore: il file non ha estensione .xml o .xbrl";
@@ -71,7 +71,7 @@ namespace Confronti
         {
             string myMessage = e.Message;
             // Reduce message length
-            // if (myMessage.length>500) myMessage=myMessage.Substring(0,500) + " [...]";
+            if (myMessage.Length>500) myMessage=myMessage.Substring(0,500) + " [...]";
             if (e.Severity == XmlSeverityType.Warning)
             {
                 Span2.InnerHtml += "WARNING: " + myMessage + "<br />";
