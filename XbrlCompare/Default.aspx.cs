@@ -70,7 +70,8 @@ namespace Confronti
          void xbrlValidationEventHandler(object sender, ValidationEventArgs e)
         {
             string myMessage = e.Message;
-            if (myMessage.length>500) myMessage=myMessage.Substring(0,500) + " [...]";
+            // Reduce message length
+            // if (myMessage.length>500) myMessage=myMessage.Substring(0,500) + " [...]";
             if (e.Severity == XmlSeverityType.Warning)
             {
                 Span2.InnerHtml += "WARNING: " + myMessage + "<br />";
