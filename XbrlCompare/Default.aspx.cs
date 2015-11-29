@@ -31,6 +31,7 @@ namespace Confronti
           
               HttpPostedFile userPostedFile1 = uploadedFiles[0];
               HttpPostedFile userPostedFile2 = uploadedFiles[1];
+              
 
               try {
                   // process file #1
@@ -55,14 +56,16 @@ namespace Confronti
                           Span1.InnerHtml += "File Content Type: " + userPostedFile2.ContentType + "<br>";
                           Span1.InnerHtml += "File Size: " + userPostedFile2.ContentLength + " bytes<br>";
                           Span1.InnerHtml += "File Name: " + userPostedFile2.FileName + "<br>";
+                          Span1.Attributes["class"] = "alert alert-success";
                       }
-                      else Span1.InnerHtml = "Errore: il file non ha estensione .xml o .xbrl";
+                      else throw new Exception("Errore: il file non ha estensione .xml o .xbrl");
                   }
-                  else Span1.InnerHtml = "Errore: sono richiesti almeno due files";
+                  else throw new Exception("Errore: sono richiesti almeno due files");
                   
 
               } catch(Exception Ex) {
                   Span1.InnerHtml = "Errore: <br>" + Ex.Message;
+                  Span1.Attributes["class"] = "alert alert-danger";
               }
           
         }
