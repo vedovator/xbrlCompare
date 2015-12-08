@@ -98,6 +98,7 @@
     <Content Include="Test\IstanzaCareggi2013.xml" />
     <Content Include="Test\Careggi.json" />
     <Content Include="Test\Asl11.json" />
+    <Content Include="Test\IstanzaEmpoli2012.xml" />
     <Content Include="Test\itcc-ci-2014-11-17.xsd">
       <SubType>Designer</SubType>
     </Content>

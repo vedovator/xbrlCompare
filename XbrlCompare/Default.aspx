@@ -13,7 +13,8 @@
             <h2>Caricamento</h2>
             <p>
                 Inserisci qui due file xbrl. <br />
-                (Puoi usare questi due esempi: <a href="Test/IstanzaCareggi2013.xml">AOUCareggi 2013</a> - <a href="Test/IstanzaEmpoli2013.xml">ASL11 2013</a>)
+                (Puoi usare questi esempi: <a href="Test/IstanzaCareggi2013.xml">AOUCareggi 2013</a> - <a href="Test/IstanzaEmpoli2013.xml">ASL11 2013</a>
+                 - <a href="Test/IstanzaEmpoli2012.xml">ASL11 2012</a>)
             </p>
             <p>
                 <asp:FileUpload ID="FileUpload1" runat="server" />
@@ -47,7 +48,6 @@
     </div>
     <div class="row" runat="server" id="secondrow">
    <p>Seleziona la categoria per visualizzare la comparazione</p>       
-    Bilancio in <span id="currency"></span> per l'anno <select id="yearSelect" style="font-size:1.4em; margin: 10px;"></select>
     <div style="width:200px; margin: 10px;float:left;">
         <div class="list-group">
             <a href="#secondrow" title="sp" class="list-group-item active">STATO PATRIMONIALE</a>
@@ -98,18 +98,14 @@
         delete bilancio2.xbrl["@xmlns:itcc-ci-ese"];
         delete bilancio2.xbrl["@xmlns:iso4217"];
         // get years from financial reports and bind them to select
-        var years = getYears(bilancio1);
-        $.each(years, function (i, item) {
-            $('#yearSelect').append($('<option>', {
-                value: item,
-                text: item
-            }));
-        });
+        var year1 = getYear(bilancio1);
+        var year2 = getYear(bilancio2);
 
         delete bilancio1.xbrl.context;
-        // show current currency
-        $('#currency').text(bilancio1.xbrl.unit.measure);
+        delete bilancio2.xbrl.context;
+        // don't care about currency
         delete bilancio1.xbrl.unit;
+        delete bilancio2.xbrl.unit;
 
         CanvasJS.addCultureInfo("it",
                 {
@@ -176,22 +172,11 @@
             var chart2Data = extractInfo(bilancio2.xbrl, sections);
             chart1.options.data[0].dataPoints = chart1Data;
             chart2.options.data[0].dataPoints = chart2Data;
-            chart1.options.title.text = bilancio1.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"];
-            chart2.options.title.text = bilancio2.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"];
+            chart1.options.title.text = bilancio1.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"] + " - Anno " + year1;
+            chart2.options.title.text = bilancio2.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"] + " - Anno " + year2;
             chart1.render();
             chart2.render();
 
-        });
-
-        
-
-        // handle year change event
-        $('#yearSelect').change(function () {
-            var chart1 = $("#chartContainer1").CanvasJSChart();
-            var chart2 = $("#chartContainer2").CanvasJSChart();
-            // to do
-            chart1.render();
-            chart2.render();
         });
 
     });

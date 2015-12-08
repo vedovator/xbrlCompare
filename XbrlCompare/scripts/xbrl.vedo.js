@@ -79,7 +79,8 @@ function aggregateTitles(finrep) {
     return fstLvlAgg;
 }
 
-function getYears(finrep) {
+function getYear(finrep) {
+    // Get Max Year for current report
     var items = finrep.xbrl.context;
     var anni = [];
     jQuery.each(items, function (i, item) {
@@ -91,7 +92,8 @@ function getYears(finrep) {
         anni.push(item.year);
     });
     anni = $.unique(anni);
-    return anni;
+    var anno = Math.max.apply(Math, anni); // get max year
+    return anno;
 }
 
 /* old stuff - handle section change event
