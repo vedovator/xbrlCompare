@@ -49,8 +49,7 @@
 	</context>
 	<unit id="eur">
 		<measure>iso4217:EUR</measure>
-	</unit>
-	
+	</unit>	
 	<itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1262405</itcc-ci:ImmobilizzazioniImmaterialiConcessioniLicenzeMarchiDirittiSimili>	
 	<itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti contextRef="i_31-12-2013" unitRef="eur" decimals="0" >1365624</itcc-ci:ImmobilizzazioniImmaterialiImmobilizzazioniCorsoAcconti>	
 	<itcc-ci:ImmobilizzazioniImmaterialiAltre contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2972630</itcc-ci:ImmobilizzazioniImmaterialiAltre>
@@ -67,7 +66,7 @@
 	<itcc-ci:ImmobilizzazioniMaterialiAltriBeni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >21741</itcc-ci:ImmobilizzazioniMaterialiAltriBeni>
 	<itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti contextRef="i_31-12-2013" unitRef="eur" decimals="0">371763</itcc-ci:ImmobilizzazioniMaterialiImmobilizzazioniCorsoAcconti>
 	<itcc-ci:TotaleImmobilizzazioniMateriali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >190524575</itcc-ci:TotaleImmobilizzazioniMateriali>
-	<itcc-ci:ImmobilizzazioniFinanziariePartecipazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0">149447</itcc-ci:ImmobilizzazioniFinanziariePartecipazioni>
+	<itcc-ci:ImmobilizzazioniFinanziariePartecipazioniTotalePartecipazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0">149447</itcc-ci:ImmobilizzazioniFinanziariePartecipazioniTotalePartecipazioni>
 	<itcc-ci:TotaleImmobilizzazioni contextRef="i_31-12-2013" unitRef="eur" decimals="0" >196274681</itcc-ci:TotaleImmobilizzazioni>
 	<!-- fine immobilizzazioni inizia attivo circolante -->
 	<itvedo-ci-ese:RimanenzeBeniSanitari contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3773114</itvedo-ci-ese:RimanenzeBeniSanitari>
@@ -98,15 +97,15 @@
 	<itcc-ci:TotaleDisponibilitaLiquide contextRef="i_31-12-2013" unitRef="eur" decimals="0" >5014444</itcc-ci:TotaleDisponibilitaLiquide>
 	<itcc-ci:TotaleAttivoCircolante contextRef="i_31-12-2013" unitRef="eur" decimals="0" >152499168</itcc-ci:TotaleAttivoCircolante>	
 	<!-- inizio ratei risconti attivi -->
-	<itcc-ci:AttivoRateiRiscontiRateiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3940</itcc-ci:AttivoRateiRiscontiRateiAttivi>
-	<itcc-ci:AttivoRateiRiscontiRiscontiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >21671</itcc-ci:AttivoRateiRiscontiRiscontiAttivi>
+	<itvedo-ci-ese:AttivoRateiRiscontiRateiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >3940</itvedo-ci-ese:AttivoRateiRiscontiRateiAttivi>
+	<itvedo-ci-ese:AttivoRateiRiscontiRiscontiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >21671</itvedo-ci-ese:AttivoRateiRiscontiRiscontiAttivi>
 	<itcc-ci:AttivoRateiRiscontiRateiRiscontiAttivi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >25611</itcc-ci:AttivoRateiRiscontiRateiRiscontiAttivi>	
 	<itcc-ci:TotaleAttivo contextRef="i_31-12-2013" unitRef="eur" decimals="0" >348799460</itcc-ci:TotaleAttivo>
 	<!-- fine attivo iniziano conti ordine -->
 	<itvedo-ci-ese:CanoniLeasingDaPagare contextRef="i_31-12-2013" unitRef="eur" decimals="0" >79466</itvedo-ci-ese:CanoniLeasingDaPagare>
 	<itvedo-ci-ese:DepositiCauzionali contextRef="i_31-12-2013" unitRef="eur" decimals="0" >2729458</itvedo-ci-ese:DepositiCauzionali>
 	<itvedo-ci-ese:BeniInComodato contextRef="i_31-12-2013" unitRef="eur" decimals="0" >395745</itvedo-ci-ese:BeniInComodato>
-	<itcc-ci:AltriContiOrdine contextRef="i_31-12-2013" unitRef="eur" decimals="0">7725744</itcc-ci:AltriContiOrdine>
+	<itcc-ci:TotaleAltriContiOrdine contextRef="i_31-12-2013" unitRef="eur" decimals="0">7725744</itcc-ci:TotaleAltriContiOrdine>
 	<itcc-ci:TotaleContiOrdine contextRef="i_31-12-2013" unitRef="eur" decimals="0">10930413</itcc-ci:TotaleContiOrdine>
 	<!-- inizia passivo e patrimonio netto -->
 	<itvedo-ci-ese:PatrimonioNettoFondoDotazione contextRef="i_31-12-2013" unitRef="eur" decimals="0">3598434</itvedo-ci-ese:PatrimonioNettoFondoDotazione>
@@ -121,7 +120,7 @@
 	<itcc-ci:PatrimonioNettoUtilePerditaEsercizioUtilePerditaEsercizio contextRef="i_31-12-2013" unitRef="eur" decimals="0" >22444</itcc-ci:PatrimonioNettoUtilePerditaEsercizioUtilePerditaEsercizio>
 	<itcc-ci:TotalePatrimonioNetto contextRef="i_31-12-2013" unitRef="eur" decimals="0" >136908404</itcc-ci:TotalePatrimonioNetto>
 	<!-- Fondi per rischi ed oneri -->
-	<itcc-ci:FondiRischiOneriRischi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4056106</itcc-ci:FondiRischiOneriRischi>
+	<itvedo-ci-ese:FondiRischiOneriRischi contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4056106</itvedo-ci-ese:FondiRischiOneriRischi>
 	<itvedo-ci-ese:FondiRischiOneriQuotaInutilizzataContributiVincolati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >10775637</itvedo-ci-ese:FondiRischiOneriQuotaInutilizzataContributiVincolati>
 	<itcc-ci:FondiRischiOneriAltri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >8562673</itcc-ci:FondiRischiOneriAltri>
 	<itcc-ci:TotaleFondiRischiOneri contextRef="i_31-12-2013" unitRef="eur" decimals="0" >23394416</itcc-ci:TotaleFondiRischiOneri>
@@ -218,7 +217,7 @@
 	<itvedo-ci-ese:CostiProduzioneVariazioniRimanenzeSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >279540</itvedo-ci-ese:CostiProduzioneVariazioniRimanenzeSanitarie>
 	<itvedo-ci-ese:CostiProduzioneVariazioniRimanenzeNonSanitarie contextRef="i_31-12-2013" unitRef="eur" decimals="0" >69452</itvedo-ci-ese:CostiProduzioneVariazioniRimanenzeNonSanitarie>
 	<itvedo-ci-ese:CostiProduzioneTotaleVariazioniRimanenze contextRef="i_31-12-2013" unitRef="eur" decimals="0" >348992</itvedo-ci-ese:CostiProduzioneTotaleVariazioniRimanenze>
-	<itvedo-ci-ese:CostiProduzioneAccantonamentiRischi contextRef="i_31-12-2013" unitRef="eur" decimals="0">830600</itvedo-ci-ese:CostiProduzioneAccantonamentiRischi>
+	<itcc-ci:CostiProduzioneAccantonamentiRischi contextRef="i_31-12-2013" unitRef="eur" decimals="0">830600</itcc-ci:CostiProduzioneAccantonamentiRischi>
 	<itvedo-ci-ese:CostiProduzioneAccantonamentiPremioOperosita contextRef="i_31-12-2013" unitRef="eur" decimals="0" >113441</itvedo-ci-ese:CostiProduzioneAccantonamentiPremioOperosita>
 	<itvedo-ci-ese:CostiProduzioneAccantonamentiQuoteInutilizzateContributiVincolati contextRef="i_31-12-2013" unitRef="eur" decimals="0" >4344862</itvedo-ci-ese:CostiProduzioneAccantonamentiQuoteInutilizzateContributiVincolati>
 	<itcc-ci:CostiProduzioneAltriAccantonamenti contextRef="i_31-12-2013" unitRef="eur" decimals="0">1500957</itcc-ci:CostiProduzioneAltriAccantonamenti>
