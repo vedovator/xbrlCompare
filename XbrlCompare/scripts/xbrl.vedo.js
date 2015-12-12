@@ -49,11 +49,63 @@ function extractInfo(bilancio, sections) {
             };
         }
 
-        
-            
 
 
 
+
+
+    });
+    return arrayData;
+}
+
+
+
+function extractHistInfo(finrep1, finrep2, sections) {
+    var arrayData = [];
+    var arrSections = sections.split(",");
+    jQuery.each(finrep1, function (i, item) {
+        // show aggregated data for SP & CE
+        if (sections === 'sp') {
+            var aggregatedSections = ['itcc-ci:TotaleImmobilizzazioniMateriali', 'itcc-ci:TotaleImmobilizzazioniImmateriali', 'itcc-ci:TotaleImmobilizzazioniFinanziarie', 'itcc-ci:TotaleRimanenze', 'itcc-ci:TotaleCrediti', 'itcc-ci:TotaleDisponibilitaLiquide'];
+
+            if ($.inArray(i, aggregatedSections) > -1) {
+                var concept = splitCamel(i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", ""));
+                var b = { type: 'line', showInLegend: true, legendText: concept, dataPoints: [] };
+                b.dataPoints.push({ 'x': new Date(item["@contextRef"].substring(8, 12), 01), 'y': Number(item["#text"]) });
+                if (typeof finrep2[i] !== 'undefined') {
+                    b.dataPoints.push({ 'x': new Date(finrep2[i]["@contextRef"].substring(8, 12), 01), 'y': Number(finrep2[i]["#text"]) });
+                };
+                arrayData.push(b);
+            }
+        };
+        if (sections === 'ce') {
+            var aggregatedSections = ['itcc-ci:TotaleValoreProduzione', 'itcc-ci:TotaleCostiProduzione', 'itcc-ci:TotalePartiteStraordinarie', 'itcc-ci:ImposteRedditoEsercizioTotaleImposteRedditoEsercizio'];
+
+            if ($.inArray(i, aggregatedSections) > -1) {
+                var concept = splitCamel(i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", ""));
+                var b = { type: 'line', showInLegend: true, legendText: concept, dataPoints: [] };
+                b.dataPoints.push({ 'x': new Date(item["@contextRef"].substring(8, 12), 01), 'y': Number(item["#text"]) });
+                if (typeof finrep2[i] !== 'undefined') {
+                    b.dataPoints.push({ 'x': new Date(finrep2[i]["@contextRef"].substring(8, 12), 01), 'y': Number(finrep2[i]["#text"]) });
+                };
+                arrayData.push(b);
+            }
+        };
+        // show detail sections
+
+        for (j = 0; j < arrSections.length; j++) {
+            if (arrSections[j] === i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", "").substring(0, arrSections[j].length)) {
+                var concept = splitCamel(i.replace("itcc-ci:", "").replace("itvedo-ci-ese:", ""));
+                if (concept.indexOf('Totale') < 0) {
+                    var b = { type: 'line', showInLegend: true, legendText: concept, dataPoints: [] };
+                    b.dataPoints.push({ 'x': new Date(item["@contextRef"].substring(8, 12), 01), 'y': Number(item["#text"]) });
+                    if (typeof finrep2[i] !== 'undefined') {
+                        b.dataPoints.push({ 'x': new Date(finrep2[i]["@contextRef"].substring(8, 12), 01), 'y': Number(finrep2[i]["#text"]) });
+                    };
+                    arrayData.push(b);
+                };
+            };
+        }
     });
     return arrayData;
 }
@@ -81,7 +133,8 @@ function aggregateTitles(finrep) {
 
 function getYear(finrep) {
     // Get Max Year for current report
-    var items = finrep.xbrl.context;
+    var items = finrep.context;
+    //console.log(items);
     var anni = [];
     jQuery.each(items, function (i, item) {
         if (typeof item.period.instant === "undefined") {

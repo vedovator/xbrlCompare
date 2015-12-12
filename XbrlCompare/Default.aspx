@@ -70,8 +70,8 @@
             <a href="#secondrow" title="ImposteRedditoEsercizio" class="list-group-item">Imposte sul reddito dell'esercizio</a>
         </div>
 </div>
-<div id="chartContainer1" style="height: 380px; width: 65%; margin: 10px;float:right;" ></div>
-<div id="chartContainer2" style="height: 380px; width: 65%; margin: 10px;float:right;"></div>
+<div id="chartContainer1" style="height: 450px; width: 65%; margin: 10px;float:right;" ></div>
+<div id="chartContainer2" style="height: 450px; width: 65%; margin: 10px;float:right;"></div>
 
 <script type="text/javascript">
 
@@ -98,8 +98,8 @@
         delete bilancio2.xbrl["@xmlns:itcc-ci-ese"];
         delete bilancio2.xbrl["@xmlns:iso4217"];
         // get years from financial reports and bind them to select
-        var year1 = getYear(bilancio1);
-        var year2 = getYear(bilancio2);
+        bilancio1.xbrl.year = getYear(bilancio1.xbrl);
+        bilancio2.xbrl.year = getYear(bilancio2.xbrl);
 
         delete bilancio1.xbrl.context;
         delete bilancio2.xbrl.context;
@@ -161,21 +161,38 @@
         // handle left menu selection
         $('.list-group-item').click(function() {
             $('.list-group-item').removeClass("active");
-            $(this).addClass( "active" );            
+            $(this).addClass( "active" ); 
             var sections = $(this).attr("title");
             //console.log(sections);
-
             var chart1 = $("#chartContainer1").CanvasJSChart();
             var chart2 = $("#chartContainer2").CanvasJSChart();
-            // bind chart data
-            var chart1Data = extractInfo(bilancio1.xbrl, sections);
-            var chart2Data = extractInfo(bilancio2.xbrl, sections);
-            chart1.options.data[0].dataPoints = chart1Data;
-            chart2.options.data[0].dataPoints = chart2Data;
-            chart1.options.title.text = bilancio1.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"] + " - Anno " + year1;
-            chart2.options.title.text = bilancio2.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"] + " - Anno " + year2;
-            chart1.render();
-            chart2.render();
+            
+            if (bilancio1.xbrl.year==bilancio2.xbrl.year) {
+                // bind chart data
+                var chart1Data = extractInfo(bilancio1.xbrl, sections);
+                var chart2Data = extractInfo(bilancio2.xbrl, sections);
+                chart1.options.data[0].dataPoints = chart1Data;
+                chart2.options.data[0].dataPoints = chart2Data;
+                chart1.options.title.text = bilancio1.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"] + " - Anno " + bilancio1.xbrl.year;
+                chart2.options.title.text = bilancio2.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"] + " - Anno " + bilancio2.xbrl.year;
+                chart1.render();
+                chart2.render();
+
+            }
+            // set up historical compare
+            else {
+                // bind chart data
+                var chart1Data = extractHistInfo(bilancio1.xbrl, bilancio2.xbrl, sections);
+                
+                chart1.options.axisY.includeZero = false;
+                chart1.options.data = chart1Data;
+                chart1.options.title.text = bilancio1.xbrl["itcc-ci:DatiAnagraficiDenominazione"]["#text"];
+                chart1.render();
+                chart2.options.title.text="";
+                chart2.options.data[0].dataPoints=[];
+                chart2.render();
+            
+            }
 
         });
 
